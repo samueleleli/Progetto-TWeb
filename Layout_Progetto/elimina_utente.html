@@ -43,7 +43,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="login.html">Registrazione/Login  </a>
+                        <a href="cart.html">Registrazione/Login  </a>
                     </div>
                 </div>
             </div>
@@ -65,8 +65,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="shop.html">Catalogo prodotti</a></li>
-                        <li><a href="modifica_catalogo.html">Modifica catalogo</a></li>
-                        <li class="active"><a href="elimina_utente.html">Cancella utente</a></li>
+                        <li><a href="single-product.html">Modifica catalogo</a></li>
+                        <li><a href="cart.html">Cancella utente</a></li>
                     </ul>
                 </div>  
             </div>
@@ -78,24 +78,41 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Cancellazione Utente</h2>
+                        <h2>Cancella Utente</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="maincontent-area">
     
-        
-        
-        <!-- qui ci andrà il contenuto -->
-        
-        
-        
-    </div>    
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                
+                
+                <div class="col-md-8">
+                    <div class="product-content-right">
+                        <div class="woocommerce">
+                            <!--href deve collegarsi alla pagina che mostra tutti i clienti registrati così da poterli eliminare-->
+                            <div class="woocommerce-info"> <a class="showlogin" data-toggle="collapse" href="" aria-expanded="false" aria-controls="login-form-wrap">Clicca qui per cancellare un cliente registrato</a>
+                            </div>
+                            <!--href deve collegarsi alla pagina che mostra tutti gli utenti staff così da poterli eliminare-->
+                            <div class="woocommerce-info"><a class="showcoupon" data-toggle="collapse" href="" aria-expanded="false" aria-controls="coupon-collapse-wrap">Clicca qui per cancellare un utente staff</a>
+                            </div>
+
+                                           
+                        </div>                       
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="footer-top-area">
-        
+        <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -108,14 +125,13 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categorie</h2>
+                        <h2 class="footer-wid-title">Categories </h2>
                         <ul>
-                            <li><a href="">Informatica</a></li>
-                            <li><a href="">Smartphone e Tablet</a></li>
-                            <li><a href="">TV</a></li>
-                            <li><a href="">Foto e Video</a></li>
-                            <li><a href="">Console e Videogiochi</a></li>
-                            <li><a href="">Domotica</a></li>
+                            <li><a href="#">Mobile Phone</a></li>
+                            <li><a href="#">Home accesseries</a></li>
+                            <li><a href="#">LED TV</a></li>
+                            <li><a href="#">Computer</a></li>
+                            <li><a href="#">Gadets</a></li>
                         </ul>                        
                     </div>
                 </div>
@@ -143,7 +159,16 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="#" target="_blank">Group 13</a></p>
+                        <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="footer-card-icon">
+                        <i class="fa fa-cc-discover"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                        <i class="fa fa-cc-visa"></i>
                     </div>
                 </div>
             </div>
@@ -159,10 +184,11 @@
     <!-- jQuery sticky menu -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
+    
     <!-- jQuery easing -->
     <script src="js/jquery.easing.1.3.min.js"></script>
     
     <!-- Main Script -->
     <script src="js/main.js"></script>
   </body>
-</html>    
+</html>

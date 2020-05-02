@@ -78,16 +78,16 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Modifica Catalogo</h2>
+                        <h2>Inserimento Prodotto</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    
-    <div class="single-product-area">
-        <div class="zigzag-bottom"></div>
+   
+   <div class="single-product-area">
+        
         <div class="container">
             <div class="row">
                 
@@ -95,17 +95,68 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                            <!--href deve collegarsi alla pagina che mostra una form per inserire i dati di un prodotto-->
-                            <div class="woocommerce-info"> <a class="showlogin" href="inserimento_prodotto.html" >Clicca qui per inserire un prodotto</a>
+                           
+
+                            <form enctype="multipart/form-data" action="#" class="checkout" method="post" name="checkout">
+
+                                <div id="customer_details" class="col2-set">
+                                    <div class="col-1">
+                                        <div class="woocommerce-billing-fields">
+                                            
+                                             <p id="billing_first_name_field" class="form-row form-row-first validate-required">
+                                                <label class="" for="billing_first_name">Nome Prodotto<abbr title="required" class="required">*</abbr>
+                                                </label>
+                                                <input type="text" value="" placeholder="" id="billing_first_name" name="billing_first_name" class="input-text ">
+                                            </p>
+                                            
+                                             <p id="billing_last_name_field" class="form-row form-row-last validate-required">
+                                                <label class="" for="billing_last_name">Descrizione Breve <abbr title="required" class="required">*</abbr>
+                                                </label>
+                                                <input type="text" value="" placeholder="" id="billing_last_name" name="billing_last_name" class="input-text ">
+                                            </p>
+                                            <div class="clear"></div>
+                                            
+                                             <p><label for="review">Descrizione Estesa<abbr title="required" class="required">*</abbr></label> <textarea name="review"  cols="30" rows="10"></textarea></p>
+                                       
+
+                                            <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">                                     
+                                                <label class="" for="billing_address_1">Prezzo <abbr title="required" class="required">*</abbr>
+                                                </label>
+                                                <input type="text" value="" placeholder="" id="billing_city" name="billing_city" class="input-text ">
+                                            </p>
+
+                                            <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">                                                
+                                                <label class="" for="billing_address_1">Prezzo Scontato <abbr title="required" class="required">*</abbr>
+                                                </label>
+                                                <input type="text" value="" placeholder="" id="billing_postcode" name="billing_postcode" class="input-text ">
+                                            </p>        
+
+                                            <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
+                                                <label class="" for="billing_address_1">Percentuale di Sconto<abbr title="required" class="required">*</abbr>
+                                                </label>
+                                                <input type="text" id="billing_state" name="billing_state" placeholder="" value="" class="input-text ">
+                                            </p>
+                                            
+                                            <div class="clear"></div>
+                                            
+                                            <p id="billing_company_field" class="form-row form-row-wide">
+                                                <label class="" for="billing_company">Sottocategoria<abbr title="required" class="required">*</abbr></label>
+                                                <input type="text" value="" placeholder="" id="billing_company" name="billing_company" class="input-text ">
+                                            </p>
+                                            
+                                            <div class="clear"></div>
+                                      
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <div class="form-row place-order">
+
+                                 <input type="submit" data-value="Place order" value="Inserisci Prodotto" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+
+
                             </div>
-                            <!--href deve collegarsi a una pagina che mostra tutti i prodotti così da poterli eliminare-->
-                            <div class="woocommerce-info"><a class="showcoupon" data-toggle="collapse" href="" aria-expanded="false" aria-controls="coupon-collapse-wrap">Clicca qui per eliminare un prodotto dal catalogo</a>
-                            </div>
-                            
-                            <!--href deve collegarsi alla pagina che mostra tutti i prodotti così da poter selezionare quello da modificare-->
-                            <div class="woocommerce-info"><a class="showcoupon" data-toggle="collapse" href="" aria-expanded="false" aria-controls="coupon-collapse-wrap">Clicca qui per modificare i dati di un prodotto del catalogo</a>
-                            </div>
-                              
                         </div>                       
                     </div>                    
                 </div>
@@ -114,6 +165,7 @@
     </div>
 
 
+   
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
