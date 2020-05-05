@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>eElectronics - HTML eCommerce Template</title>
     
-  
+    
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     
-   
+    
     
     <!-- Custom CSS -->
     
@@ -39,7 +39,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.html">Registrazione/Login  </a>
+                        <a href="login.html">Registrazione/Login  </a>
                     </div>
                 </div>
             </div>
@@ -61,8 +61,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="shop.html">Catalogo prodotti</a></li>
-                        <li><a href="single-product.html">Modifica catalogo</a></li>
-                        <li><a href="cart.html">Cancella utente</a></li>
+                        <li><a href="modifica_catalogo.html">Modifica catalogo</a></li>
+                        <li><a href="elimina_utente.html">Cancella utente</a></li>
                     </ul>
                 </div>  
             </div>
@@ -74,15 +74,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Profilo Personale</h2>
+                        <h2>Login/Registrazione</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!--nella form dovranno apparire i dati dell'utente, ma tutti i campi tranne quello dello username si potranno modificare -->
-   <div class="single-product-area">
+    
+    <div class="single-product-area">
         
         <div class="container">
             <div class="row">
@@ -91,11 +91,35 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                           
+                            <div class="woocommerce-info">Sei un utente registrato? <a class="showlogin" data-toggle="collapse" href="#login-form-wrap" aria-expanded="false" aria-controls="login-form-wrap">Clicca qui per effetturare il login</a>
+                            </div>
 
-                            <form enctype="multipart/form-data" action="#" class="checkout" method="post" name="checkout">
+                            <form id="login-form-wrap" class="login collapse" method="post">
 
-                                <div id="customer_details" class="col2-set">
+
+                               
+                                <p class="form-row form-row-first">
+                                    <label for="username">Username<span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="username" name="username" class="input-text">
+                                </p>
+                                <p class="form-row form-row-last">
+                                    <label for="password">Password <span class="required">*</span>
+                                    </label>
+                                    <input type="password" id="password" name="password" class="input-text">
+                                </p>
+                                
+                                <p class="form-row">
+                                    <input type="submit" value="Login" name="login" class="button">                                    
+                                </p>
+                            </form>
+
+                            <div class="woocommerce-info">Sei un nuovo utente? <a class="showcoupon" data-toggle="collapse" href="#coupon-collapse-wrap" aria-expanded="false" aria-controls="coupon-collapse-wrap">Clicca qui per effettuare la registrazione</a>
+                            </div>
+
+                            <form id="coupon-collapse-wrap" method="post" class="checkout_coupon collapse" enctype="multipart/form-data" action="#" name="checkout">
+
+                               <div id="customer_details" class="col2-set">
                                     <div class="col-1">
                                         <div class="woocommerce-billing-fields">
                                             
@@ -110,7 +134,6 @@
                                                 </label>
                                                 <input type="text" value="" placeholder="" id="billing_last_name" name="billing_last_name" class="input-text ">
                                             </p>
-                                            <div class="clear"></div>
                                             
                                             <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
                                                 <label class="" for="billing_address_1">Indirizzo di residenza <abbr title="required" class="required">*</abbr>
@@ -133,7 +156,7 @@
                                                 <input type="text" id="billing_state" name="billing_state" placeholder="Stato" value="" class="input-text ">
                                             </p>
                                             
-                                            <div class="clear"></div>
+                                            
                                             
                                             <p id="billing_company_field" class="form-row form-row-wide">
                                                 <label class="" for="billing_company">Data di Nascita<abbr title="required" class="required">*</abbr></label>
@@ -161,35 +184,32 @@
                                                 <input type="text" value="" placeholder="" id="billing_email" name="billing_email" class="input-text ">
                                             </p>
 
-                                            <div class="clear"></div>
-                                      
-                                            <p id="account_password_field" class="form-row validate-required">
+                                            
+
+
+                                           <p id="account_password_field" class="form-row validate-required">
                                                 <label class="" for="account_password">Account password <abbr title="required" class="required">*</abbr>
                                                 </label>
                                                 <input type="password" value="" placeholder="Password" id="account_password" name="account_password" class="input-text">
                                             </p>  
-                                            <div class="clear"></div>
+                                            
                                            
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-row place-order">
 
-                            </form>
-                            <div class="form-row place-order">
+                                 <input type="submit" data-value="Place order" value="Registrati" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
 
-                                 <input type="submit" data-value="Place order" value="Modifica" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+                                </div>
 
-
-                            </div>
+                            </form>                           
                         </div>                       
                     </div>                    
                 </div>
             </div>
         </div>
-    </div>
-
-
-   
+    </div>                
     <div class="footer-top-area">
         
         <div class="container">
@@ -224,13 +244,14 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2020 eElectronics. All Rights Reserved. Coded with &hearts; by <a href="#" target="_blank">Group 13</a></p>
+                        <p>&copy; 2020 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="#" target="_blank">Group 13</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div> <!-- End footer bottom area -->
    
-   
+    
+  
   </body>
 </html>

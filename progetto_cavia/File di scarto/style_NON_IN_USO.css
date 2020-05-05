@@ -764,14 +764,12 @@ div.cart-collaterals ul.products li.product .price ins {
     text-decoration: none;
 }
 
-#customer_details label {
-    display: block;
-    margin: 0 0 5px;
-}
-#customer_details input[type="text"], #customer_details textarea, .shipping_calculator input[type=text] {
+
+.shipping_calculator input[type=text] {
     margin-bottom: 10px;
     width: 100%;
 }
+
 #customer_details h3 {
     color: #1abc9c;
     font-size: 20px;
