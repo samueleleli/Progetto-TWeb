@@ -1,5 +1,7 @@
 
-body { font-family: sans-serif; }
+body { 
+    font-family: sans-serif; 
+}
 
 h1,
 h2,
@@ -14,6 +16,9 @@ h6 {
 img {
     max-width: 100%;
     height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 10px; 
 }
 
 .logo h1 {
@@ -60,10 +65,10 @@ a {color: #1abc9c}
 a:hover, a:focus {color: #17a78b}
 
 .mainmenu-area {background: none repeat scroll 0 0 #1abc9c;
-font-family: sans-serif;
-text-transform: uppercase;
-width: 100%;
-z-index: 999;}
+                font-family: sans-serif;
+                text-transform: uppercase;
+                width: 100%;
+                z-index: 999;}
 
 .mainmenu-area ul.navbar-nav li a {
     color: #fff;
@@ -79,11 +84,11 @@ z-index: 999;}
 .product-big-title-area {background: url(img/crossword.png) repeat scroll 0 0 #1ABC9C}
 
 .product-bit-title h2 {
-  font-family: raleway;
-  font-size: 50px;
-  font-weight: 200;
-  margin: 0;
-  padding: 50px 0;color: #fff;
+    font-family: raleway;
+    font-size: 50px;
+    font-weight: 200;
+    margin: 0;
+    padding: 50px 0;color: #fff;
 }
 
 .maincontent-area {
@@ -93,32 +98,32 @@ z-index: 999;}
 }
 
 .latest-product .owl-nav {
-  position: absolute;
-  right: 0;
-  top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .latest-product .owl-nav div {
-  border: 1px solid #1abc9c;
-  color: #1abc9c;
-  display: inline-block;
-  margin-left: 15px;
-  padding: 1px 10px;
+    border: 1px solid #1abc9c;
+    color: #1abc9c;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 1px 10px;
 }
 
 .latest-product .owl-nav div:hover{color: #222;border-color: #222}
 
 .section-title {
-  font-family: "Raleway",sans-serif;
-  margin-top: 25px;
-  font-size: 50px;
-  font-weight: 100;
-  margin-bottom: 25px;
-  text-align: center;
+    font-family: "Raleway",sans-serif;
+    margin-top: 25px;
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .product-carousel {
-  padding-top: 40px;
+    padding-top: 40px;
 }
 
 .footer-top-area{
@@ -126,15 +131,15 @@ z-index: 999;}
     overflow: hidden;
     background: none repeat scroll 0 0 #333;
     color: #999;
-    padding: 35px 0 180px;
+    padding: 35px 0 35px;
 }
 
 .footer-about-us span {
-  color: #1abc9c;
+    color: #1abc9c;
 }
 
 .footer-about-us h2 {
-  font-weight: 200;
+    font-weight: 200;
 }
 
 .footer-menu ul {
@@ -152,19 +157,19 @@ z-index: 999;}
 }
 
 .footer-wid-title {
-  font-family: raleway;
-  font-size: 30px;
-  font-weight: 100;color: #fff
+    font-family: raleway;
+    font-size: 30px;
+    font-weight: 100;color: #fff
 }
 
 .footer-bottom-area {
-  background: none repeat scroll 0 0 #000;
-  color: #fff;
-  padding-bottom: 40px;
+    background: none repeat scroll 0 0 #000;
+    color: #fff;
+    padding-bottom: 40px;
 }
 
 .copyright > p {
-  margin: 10px 0 0;
+    margin: 10px 0 0;
 }
 
 .user-menu li a i.fa {
@@ -182,13 +187,13 @@ z-index: 999;}
 .single-shop-product {margin-bottom: 50px}
 
 .pagination > li > a, .pagination > li > span {
-  color: #1abc9c;
+    color: #1abc9c;
 }
 
 .single-product-area {
-  padding: 80px 0 130px;
-  position: relative;
-  overflow: hidden
+    padding: 80px 0 130px;
+    position: relative;
+    overflow: hidden
 }
 
 .single-sidebar {
@@ -225,14 +230,14 @@ z-index: 999;}
 .single-shop-product {margin-bottom: 50px}
 
 .product-carousel-price ins {
-  color: #1abc9c;
-  font-weight: 700;
-  margin-right: 5px;
-  text-decoration: none;
+    color: #1abc9c;
+    font-weight: 700;
+    margin-right: 5px;
+    text-decoration: none;
 }
 
 .pagination > li > a, .pagination > li > span {
-  color: #1abc9c;
+    color: #1abc9c;
 }
 
 .woocommerce-info {
