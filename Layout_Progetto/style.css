@@ -156,7 +156,8 @@ a:hover, a:focus {color: #17a78b}
 
 .footer-menu ul li {
     border-bottom: 1px dashed #555;
-    padding: 5px 0;
+    padding: 15px 0;
+    
 }
 
 .footer-menu a {
@@ -173,7 +174,7 @@ a:hover, a:focus {color: #17a78b}
 .footer-bottom-area {
     background: none repeat scroll 0 0 #000;
     color: #fff;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
 }
 
 .copyright > p {
@@ -316,6 +317,26 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     background: none repeat scroll 0 0 #f4f4f4;
     margin-bottom: 20px;
     padding: 15px;
+}
+
+
+
+.google-maps {
+  position: relative;
+  padding-bottom: 90%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 85%;
+}
+
+.testo-footer{
+     font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 75%
 }
 
 /*
