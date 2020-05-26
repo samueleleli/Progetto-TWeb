@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <title>eElectonics | @yield('title', 'Catalogo eElectronics')</title>
+        <title>eElectronics | @yield('title', 'Catalogo eElectronics')</title>
     </head>
     
     <body>
@@ -14,12 +14,12 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="index.html">e<span>Electronics</span></a></h1>
+                        <h1><a href="{{ route('home') }}">e<span>Electronics</span></a></h1>
                     </div>
                 </div>                
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="login.html">Registrazione/Login</a>
+                        <a href="{{ route('login') }}">Registrazione/Login</a>
                     </div>
                 </div>
             </div>
