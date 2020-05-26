@@ -17,12 +17,12 @@ class PublicController extends Controller {
         //Categorie
         $cats = $this->_catalogModel->getCats();
         
-        //Prodotti in sconto di tutte le categorie, ordinati per sconto decrescente
-        //$prods = $this->_catalogModel->getProdsByCat($cats->map->only(['catId']), 3, 'desc', true);
+        //Prodotti di tutte le categorie
+        $prods = $this->_catalogModel->getProdsByCat($cats->map->only(['idCategoria']), 5);
 
         return view('catalog')
-                        ->with('categories', $cats);
-                        //->with('products', $prods);
+                        ->with('categories', $cats)
+                        ->with('products', $prods);
     }
 
     public function showCategories($catId) {
@@ -33,17 +33,17 @@ class PublicController extends Controller {
         //Categoria selezionata
         $selCat = $cats->where('catId', $catId)->first();
 
-        // Sottocategorie
+        //Sottocategorie
         $subCats = $this->_catalogModel->getSubCatsById([$catId]);
         
-        //Prodotti in sconto della categoria selezionata, ordinati per sconto decrescente 
-        //$prods = $this->_catalogModel->getProdsByCat([$catId], 3, 'desc', true);
+        //Prodotti della categoria selezionata 
+        $prods = $this->_catalogModel->getProdsByCat([$catId]);
 
         return view('catalog')
                         ->with('categories', $cats)
                         ->with('selectedCat', $selCat)
-                        ->with('subCategories', $subCats);
-                        //->with('products', $prods);
+                        ->with('subCategories', $subCats)
+                        ->with('products', $prods);
         }
 
     public function showSubCategories($catId, $sotCatId) {
@@ -54,10 +54,10 @@ class PublicController extends Controller {
         //Categoria selezionata
         $selCat = $cats->where('catId', $catId)->first();
 
-        // Sottocategorie
+        //Sottocategorie
         $subCats = $this->_catalogModel->getSubCatsById([$catId]);
 
-        // Prodotti
+        //Prodotti della sottocategoria selezionata
         $prods = $this->_catalogModel->getProdsByCat([$sotCatId]);
 
        return view('catalog')

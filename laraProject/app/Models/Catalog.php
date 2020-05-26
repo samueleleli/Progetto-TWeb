@@ -17,7 +17,7 @@ class Catalog {
     }
 
     // Estrae i prodotti della categoria o della sottocategoria/e $catId (tutti o solo quelli in sconto), eventualmente ordinati
-    public function getProdsByCat($catId, $paged = 1, $order = null, $discounted = false) {
+    public function getProdsByCat($catId, $paged = 3, $order = null, $discounted = false) {
 
         $prods = Product::whereIn('idSottocategoria', $catId)
                 ->orWhereHas('prodSubCat', function ($query) use ($catId) {
