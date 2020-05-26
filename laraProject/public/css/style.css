@@ -342,6 +342,22 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
      font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 75%
 }
 
+.area-main-content {  
+    padding-bottom:50px;
+    padding-top: 50px;
+}
+
+.errors{
+    color:#c82829
+}
+
+.admin-profile{
+    padding-bottom:300px;
+    padding-top: 30px;
+    padding-left: 30px;
+    
+}
+
 /*
  *
  *

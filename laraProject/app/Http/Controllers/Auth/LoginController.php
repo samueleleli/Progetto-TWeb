@@ -26,7 +26,33 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+//    protected $redirectTo = '/home';
+
+    /**
+     * Override:: definisce la homepage per i diversi utenti.
+     *
+     * @var string
+     */
+    protected function redirectTo() {        
+        $role = auth()->user()->tipologiaUtente;
+        switch ($role) {
+            case 'user': return '/user';
+                break;
+            case 'staff': return '/staff';
+                break;
+            case 'admin': return '/admin';
+                break;           
+            default: return '/';
+        };
+    }
+    
+    /**
+     * Override:: Login con 'username' al posto di 'email'.
+     *
+     */
+    public function username() {
+        return 'username';
+    }
 
     /**
      * Create a new controller instance.

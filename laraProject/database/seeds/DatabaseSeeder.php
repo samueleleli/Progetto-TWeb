@@ -70,9 +70,15 @@ class DatabaseSeeder extends Seeder
         ]);
         
         DB::table('users')->insert([     
-            ['nome' => 'Mario', 'cognome' => 'Rossi', 'username' => 'adminadmin',
-                'password' => Hash::make('adminadmin'), 'tipologiaUtente' => 'admin', 'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s")]
+            ['nome' => 'NomeAdmin', 'cognome' => 'CognomeAdmin', 'username' => 'adminadmin',
+                'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'admin', 'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")],
+            ['nome' => 'NomeUser', 'cognome' => 'CognomeUser', 'username' => 'useruser',
+                'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'user', 'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")],
+            ['nome' => 'NomeStaff', 'cognome' => 'CognomeStaff', 'username' => 'staffstaff',
+                'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'staff', 'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")],
         ]);
         
         

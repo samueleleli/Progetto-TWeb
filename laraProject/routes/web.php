@@ -39,3 +39,15 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')
         ->name('register');
 
 Route::post('register', 'Auth\RegisterController@register');
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'AdminController@index')
+        ->name('admin')->middleware('can:isAdmin');
+
+Route::get('/staff', 'StaffController@index')
+        ->name('staff')->middleware('can:isStaff');
+
+Route::get('/user', 'UserController@index')
+        ->name('user')->middleware('can:isUser');

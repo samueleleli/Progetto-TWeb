@@ -16,12 +16,14 @@
                     <div class="logo">
                         <h1><a href="{{ route('home') }}">e<span>Electronics</span></a></h1>
                     </div>
-                </div>                
+                </div>
+                @guest
                 <div class="col-sm-6">
                     <div class="shopping-item">
                         <a href="{{ route('login') }}">Registrazione/Login</a>
                     </div>
                 </div>
+                @endguest
             </div>
         </div>
         <div class="mainmenu-area">
