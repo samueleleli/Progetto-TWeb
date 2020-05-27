@@ -370,6 +370,10 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
   width: 50%;
 }
 
+.form-width {
+    width: 400px;
+}
+
 /*
  *
  *
