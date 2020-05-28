@@ -242,15 +242,22 @@ a:hover, a:focus {color: #17a78b}
 
 .single-shop-product {margin-bottom: 50px}
 
-.product-carousel-price ins {
-    color: #1abc9c;
-    font-weight: 700;
-    margin-right: 5px;
-    text-decoration: none;
+.price{
+    color: #424954;
+    font-family: Verdana;
+    padding-right: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: right;
 }
 
-.pagination > li > a, .pagination > li > span {
-    color: #1abc9c;
+.discprice{
+    color: #CC0000;
+    font-family: Verdana;
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
 }
 
 .woocommerce-info {

@@ -31,7 +31,7 @@ class PublicController extends Controller {
         $cats = $this->_catalogModel->getCats();
 
         //Categoria selezionata
-        $selCat = $cats->where('catId', $catId)->first();
+        $selCat = $cats->where('idCategoria', $catId)->first();
 
         //Sottocategorie
         $subCats = $this->_catalogModel->getSubCatsById([$catId]);
@@ -52,7 +52,7 @@ class PublicController extends Controller {
         $cats = $this->_catalogModel->getCats();
 
         //Categoria selezionata
-        $selCat = $cats->where('catId', $catId)->first();
+        $selCat = $cats->where('idCategoria', $catId)->first();
 
         //Sottocategorie
         $subCats = $this->_catalogModel->getSubCatsById([$catId]);
