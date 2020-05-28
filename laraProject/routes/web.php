@@ -57,7 +57,7 @@ Route::get('/modCat', 'StaffController@menuStaff')
 
 
 
-Route::get('/delproduct', 'StaffController@removeProduct')
+Route::get('/delProd', 'StaffController@showCatalog')
         ->name('delproduct')->middleware('can:isStaff');
 
 Route::get('/newproduct', 'StaffController@addProduct')

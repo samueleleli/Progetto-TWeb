@@ -30,7 +30,7 @@
                 <div class="row">
                     
                     <div class="pulsante_staff">
-                        <a href="{{ route('delproduct') }}">Elimina Prodotto</a>
+                        <a href="{{ route('catalog1') }}">Elimina Prodotto</a>
                     </div>
                         
                 </div>

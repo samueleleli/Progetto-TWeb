@@ -8,7 +8,12 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Catalogo Prodotti</h2>
+                       
+                         @can('isStaff')
+                            <h2>Elimina Prodotti</h2>
+                         @else
+                            <h2>Catalogo Prodotti</h2>
+                         @endcan
                     </div>
                 </div>
             </div>
@@ -54,9 +59,20 @@
                                 <div class="col-md-9">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-6">    
-                                            <h2>{{ $product->nome }}</h2>
+                                            
+                                            <h2>{{ $product->nome }}  
+                                            
+                                            @can('isStaff')
+                                            <a href="{{ route('delproduct')}}"> 
+                                                <img src="{{ asset('images/x-delete.png') }} " width="60" height="60" alt="none" align="right"> 
+                                            </a>
+                                            @endcan
+                                            
+                                            </h2>
+                                          
                                             <h4>Descrizione breve: </h4><p class="descr">{{ $product->descrBreve }}</p>                                        
                                             <h4>Descrizione estesa: </h4><p class="descr">{{ $product->descrEstesa }}</p>
+                                            
                                             @include('helpers/productPrice')
                                         </div>
                                     </div>

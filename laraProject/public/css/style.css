@@ -407,6 +407,10 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     color: #1abc9c
 }
 
+.delete{
+    width: 10px;
+}
+
 /*
  *
  *

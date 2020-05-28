@@ -59,5 +59,10 @@ class StaffController extends Controller {
 
         return redirect()->action('StaffController@index');
     }
+    
+    public function removeProduct(){
+        
+      
+    }
 
 }
