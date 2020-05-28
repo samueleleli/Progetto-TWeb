@@ -17,7 +17,7 @@
                             @endcan
                             
                             @can('isAdmin')
-                            <li><a href="">Gestione Utenti</a></li>
+                            <li><a href="{{ route('manUsers') }}">Gestione Utenti</a></li>
                             <li><a href="{{ route('admin') }}">Profilo</a></li>
                             @endcan
                             
