@@ -21,12 +21,12 @@
         <div class="center">
             <div class="row">
                 <div class="center">
-                    {{ Form::open(array('route' => 'newproduct.store', 'id' => 'addproduct', 'files' => true)) }}        
+                    {{ Form::open(array('route' => 'newproduct.store', 'files' => true)) }}        
                     <div id="customer_details" class="col2-set">
                         <div class="col-4">
                             <p>
-                                {{Form::label('nome_prodotto','Nome Prodotto')}}
-                                {{Form::text('nome_prodotto','',['id' => 'nome_prodotto'])}}
+                                {{Form::label('nome','Nome Prodotto')}}
+                                {{Form::text('nome','',['id' => 'nome'])}}
                                 @if ($errors->first('nome_prodotto'))
                             <ul class="errors">
                                 @foreach ($errors->get('nome_prodotto') as $message)
@@ -36,8 +36,8 @@
                             @endif
                             </p>
                             <p>
-                                {{ Form::label('catId', 'Categoria', ['class' => 'label-input']) }}
-                                {{Form::select('catId', $cats,['id' => 'categoria'])}}
+                                {{ Form::label('idSottocategoria', 'Categoria', ['class' => 'label-input']) }}
+                                {{Form::select('idSottocategoria', $cats,' ',['id' => 'idSottocategoria'])}}
                                 @if ($errors->first('catId'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('catId') as $message)
@@ -47,12 +47,12 @@
                             @endif
                             </p>
                             <p>
-                                {{ Form::label('image', 'Immagine', ['class' => 'label-input']) }}
-                                {{ Form::file('image', ['class' => 'input', 'id' => 'image']) }}
+                                {{ Form::label('immagine', 'Immagine', ['class' => 'label-input']) }}
+                                {{ Form::file('immagine', ['class' => 'input', 'id' => 'immagine']) }}
                             </p>                                     
                             <p>
-                                {{Form::label('descrizione_breve','Descrizione Breve')}}
-                                {{Form::textarea('descrizione_breve','',['id' => 'descrizione_breve','cols'=>'30', 'rows'=>'5'])}}
+                                {{Form::label('descrBreve','Descrizione Breve')}}
+                                {{Form::textarea('descrBreve','',['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
                                 @if ($errors->first('descrizione_breve'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('descrizione_breve') as $message)
@@ -62,8 +62,8 @@
                             @endif
                             </p>
                             <p>
-                                {{Form::label('descrizione_estesa','Descrizione Estesa')}}
-                                {{Form::textarea('descrizione_estesa','',['id' => 'descrizione_estesa','cols'=>'30', 'rows'=>'10'])}}
+                                {{Form::label('descrEstesa','Descrizione Estesa')}}
+                                {{Form::textarea('descrEstesa','',['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
                                 @if ($errors->first('descrizione_estesa'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('descrizione_estesa') as $message)
@@ -84,9 +84,15 @@
                             @endif
                             </p>
                             <p>
-                                {{Form::label('perc_sconto','Percentuale di sconto (%)')}}
-                                {{Form::text('perc_sconto','',['id' => "percentuale_sconto"])}}
-
+                                {{Form::label('percSconto','Percentuale di sconto (%)')}}
+                                {{Form::text('percSconto','',['id' => "percSconto"])}}
+                            @if ($errors->first('percSconto'))                            
+                            <ul class="errors">
+                                @foreach ($errors->get('percSconto') as $message)
+                                <li>{{ $message }}</li>
+                                @endforeach
+                            </ul>
+                            @endif
                             </p>
                         </div>
                     </div>

@@ -25,14 +25,13 @@ class NewProductRequest extends FormRequest {
      */
     public function rules() {
         return [
-            'nome_prodotto' => 'required|max:25',
-            'catId' => 'required',
-            'descrizione_breve' => 'required|max:30',
-            'image' => 'image|max:1024',
+            'nome' => 'required|max:25',
+            'idSottocategoria' => 'required',
+            'descrBreve' => 'required|max:30',
+            'immagine' => 'image|max:1024',
             'prezzo' => 'required|numeric|min:0',
-            'perc_sconto' => 'required|integer|min:0|max:100',
-           
-            'descrizione_estesa' => 'required|max:2500'
+            'percSconto' => 'required|integer|min:0|max:100',
+            'descrEstesa' => 'required|max:2500'
         ];
     }
 

@@ -25,7 +25,7 @@ class StaffController extends Controller {
 
     public function addProduct() {
        
-        $prodCats = $this->_staffModel->getProdsCats()->pluck('sottoCategoria', 'sottoCategoria');
+        $prodCats = $this->_staffModel->getProdsCats()->pluck('sottoCategoria', 'idsottoCategoria');
         
         return view('product.insert')
                         ->with('cats', $prodCats);
@@ -33,19 +33,25 @@ class StaffController extends Controller {
 
     public function storeProduct(NewProductRequest $request) {
 
-        if ($request->hasFile('image')) {
+      if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = $image->getClientOriginalName();
         } else {
             $imageName = NULL;
         }
-        $catalog = new Catalog;
+      
         $product = new Product;
+        
         $product->fill($request->validated());
-        $product->image = $imageName;
+        if($product->percSconto == 0){
+            $product->flagSconto=0;
+        }
+        else{
+            $product->flagSconto=1;
+        }
+        $product->immagine = $imageName;
         $product->save();
         
-
         if (!is_null($imageName)) {
             $destinationPath = public_path() . '/images/products';
             $image->move($destinationPath, $imageName);
