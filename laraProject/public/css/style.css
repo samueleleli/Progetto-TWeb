@@ -261,16 +261,7 @@ a:hover, a:focus {color: #17a78b}
 }
 
 
-.product-carousel-price ins {
-    color: #1abc9c;
-    font-weight: 700;
-    margin-right: 5px;
-    text-decoration: none;
-}
 
-.pagination > li > a, .pagination > li > span {
-    color: #1abc9c;
-}
 
 .woocommerce-info {
     background: none repeat scroll 0 0 #f4f4f4;
