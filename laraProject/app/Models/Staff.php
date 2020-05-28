@@ -8,7 +8,11 @@ use App\Models\Resources\Product;
 class Staff {
     
     public function getProdsCats() {
-        return SubCategory::where('idSottocategoria', '!=', 0)->get();
+        
+        foreach(SubCategory::all() as $category) { 
+          $Allcategory = $category;
+        }
+        return $Allcategory;
     }
 
 }

@@ -37,7 +37,7 @@
                             </p>
                             <p>
                                 {{ Form::label('catId', 'Categoria', ['class' => 'label-input']) }}
-                                {{Form::select('catId', $cats,['id' => 'catId'])}}
+                                {{Form::select('catId', $cats,['id' => 'categoria'])}}
                                 @if ($errors->first('catId'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('catId') as $message)

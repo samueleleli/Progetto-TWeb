@@ -25,7 +25,7 @@ class StaffController extends Controller {
 
     public function addProduct() {
        
-        $prodCats = $this->_staffModel->getProdsCats()->pluck('sottocategoria', 'catId');
+        $prodCats = $this->_staffModel->getProdsCats()->pluck('sottoCategoria', 'sottoCategoria');
         
         return view('product.insert')
                         ->with('cats', $prodCats);
@@ -39,11 +39,12 @@ class StaffController extends Controller {
         } else {
             $imageName = NULL;
         }
-
+        $catalog = new Catalog;
         $product = new Product;
         $product->fill($request->validated());
         $product->image = $imageName;
         $product->save();
+        
 
         if (!is_null($imageName)) {
             $destinationPath = public_path() . '/images/products';
