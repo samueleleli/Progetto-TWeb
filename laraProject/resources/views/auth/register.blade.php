@@ -108,7 +108,9 @@
                         </p>
                         <p>
                             {{ Form::label('dataNascita', 'Data di Nascita', ['class' => 'label-input']) }}
-                            {{ Form::date('dataNascita', \Carbon\Carbon::now()) }}
+                            {{ Form::date('dataNascita') }}
+                            
+                           
                           
                             @if ($errors->first('dataNascita'))                            
                             <ul class="errors">
