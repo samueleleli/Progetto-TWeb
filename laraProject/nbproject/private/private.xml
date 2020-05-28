@@ -3,9 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/laraProject/app/Models/Catalog.php</file>
-            <file>file:/C:/xampp/htdocs/laraProject/app/Http/Controllers/PublicController.php</file>
-            <file>file:/C:/xampp/htdocs/laraProject/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/admin.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/layouts/app.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/staff.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/layouts/public.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/product/modificaCat.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/catalog.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/app/Http/Controllers/StaffController.php</file>
+            <file>file:/C:/xampp/htdocs/Progetto-TWeb/Progetto-TWeb/laraProject/resources/views/layouts/_navpublic.blade.php</file>
         </group>
     </open-files>
 </project-private>

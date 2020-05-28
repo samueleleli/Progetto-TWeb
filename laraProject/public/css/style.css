@@ -374,6 +374,25 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     width: 400px;
 }
 
+.pulsante_staff{
+    
+    border: 1px solid #ddd;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 60px;
+    padding: 10px;
+    position: relative;
+}
+
+.pulsante_staff:hover {
+    background: none repeat scroll 0 0 #1abc9c;
+    border-color: #1abc9c;
+}
+
+.pulsante_staff:hover a {
+    color: #fff;text-decoration: none
+}
+
 /*
  *
  *

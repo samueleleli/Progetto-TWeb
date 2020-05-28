@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use App\Models\Resources\Category;
+use App\Models\Resources\SubCategory;
 use App\Models\Resources\Product;
 
 class Staff {
     
     public function getProdsCats() {
-        return Category::where('parId', '!=', 0)->get();
+        return SubCategory::where('idSottocategoria', '!=', 0)->get();
     }
 
 }

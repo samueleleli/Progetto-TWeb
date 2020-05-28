@@ -49,5 +49,20 @@ Route::get('/admin', 'AdminController@index')
 Route::get('/staff', 'StaffController@index')
         ->name('staff')->middleware('can:isStaff');
 
+Route::get('/modCat', 'StaffController@menuStaff')
+        ->name('modificacatalogo')->middleware('can:isStaff');
+
+Route::get('/modCat/newproduct', 'StaffController@addProduct')
+        ->name('newproduct')->middleware('can:isStaff');
+
+Route::get('/modCat/delproduct', 'StaffController@removeProduct')
+        ->name('delproduct')->middleware('can:isStaff');
+
+Route::get('/modCat/selproduct', 'StaffController@selectProduct')
+        ->name('selproduct')->middleware('can:isStaff');
+
+Route::post('/modCat/newproduct', 'StaffController@storeProduct')
+        ->name('newproduct.store');
+
 Route::get('/user', 'UserController@index')
         ->name('user')->middleware('can:isUser');

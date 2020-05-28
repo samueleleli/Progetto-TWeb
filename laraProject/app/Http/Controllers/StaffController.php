@@ -18,9 +18,15 @@ class StaffController extends Controller {
     public function index() {
         return view('staff');
     }
+    
+    public function menuStaff(){
+        return view('product.modificaCat');
+    }
 
     public function addProduct() {
-        $prodCats = $this->_staffModel->getProdsCats()->pluck('name', 'catId');
+       
+        $prodCats = $this->_staffModel->getProdsCats()->pluck('sottocategoria', 'catId');
+        
         return view('product.insert')
                         ->with('cats', $prodCats);
     }
