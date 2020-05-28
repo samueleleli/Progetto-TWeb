@@ -18,7 +18,7 @@ class PublicController extends Controller {
         $cats = $this->_catalogModel->getCats();
         
         //Prodotti di tutte le categorie
-        $prods = $this->_catalogModel->getProdsByCat($cats->map->only(['idCategoria']), 5);
+        $prods = $this->_catalogModel->getProdsByCat($cats->map->only(['idCategoria']));
 
         return view('catalog')
                         ->with('categories', $cats)
@@ -37,7 +37,7 @@ class PublicController extends Controller {
         $subCats = $this->_catalogModel->getSubCatsById([$catId]);
         
         //Prodotti della categoria selezionata 
-        $prods = $this->_catalogModel->getProdsByCat([$catId]);
+        $prods = $this->_catalogModel->getProdsByCat([$catId], 3);
 
         return view('catalog')
                         ->with('categories', $cats)
@@ -58,7 +58,7 @@ class PublicController extends Controller {
         $subCats = $this->_catalogModel->getSubCatsById([$catId]);
 
         //Prodotti della sottocategoria selezionata
-        $prods = $this->_catalogModel->getProdsByCat([$sotCatId]);
+        $prods = $this->_catalogModel->getProdsBySubCat([$sotCatId]);
 
        return view('catalog')
                         ->with('categories', $cats)
