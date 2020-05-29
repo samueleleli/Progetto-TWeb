@@ -8,12 +8,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                       
-                         @can('isStaff')                           
-                         <h2>Elimina Prodotti</h2>                          
-                         @else
+                         @if($flagpub)
                             <h2>Catalogo Prodotti</h2>
-                         @endcan
+                         @else   
+                            <h2>Elimina Prodotti</h2>
+                         @endif
                     </div>
                 </div>
             </div>
@@ -29,18 +28,30 @@
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Categorie Prodotti</h2>
                             <ul>
-                                @foreach ($categories as $category)
-                                    <li><a href="{{ route('catalog2', [$category->idCategoria]) }}">{{ $category->categoria }}</a>
-                                @endforeach
+                                @if($flagpub) 
+                                        @foreach ($categories as $category)
+                                            <li><a href="{{ route('catalog2', [$category->idCategoria])}}">{{ $category->categoria }}</a>
+                                        @endforeach
+                                    @else
+                                        @foreach ($categories as $category)
+                                            <li><a href="{{ route('catalog2Staff', [$category->idCategoria])}}">{{ $category->categoria }}</a>
+                                        @endforeach
+                                    @endif
                             </ul>
                     </div>
                     @isset($selectedCat)
                         <div class="single-sidebar">
                             <h2 class="sidebar-title">Sottocategorie in {{ $selectedCat->categoria }}</h2>
                                 <ul>
-                                    @foreach ($subCategories as $subCategory)
-                                        <li><a href="{{ route('catalog3', [$selectedCat->idCategoria, $subCategory->idSottocategoria]) }}">{{ $subCategory->sottocategoria }}</a>
-                                    @endforeach
+                                    @if($flagpub) 
+                                        @foreach ($subCategories as $subCategory)
+                                            <li><a href="{{ route('catalog3', [$selectedCat->idCategoria, $subCategory->idSottocategoria])}}">{{ $subCategory->sottocategoria }}</a>
+                                        @endforeach
+                                    @else
+                                        @foreach ($subCategories as $subCategory)
+                                            <li><a href="{{ route('catalog3Staff', [$selectedCat->idCategoria, $subCategory->idSottocategoria])}}">{{ $subCategory->sottocategoria }}</a>
+                                        @endforeach
+                                    @endif    
                                 </ul>
                         </div>
                     @endisset()
@@ -61,12 +72,14 @@
                                         <div class="col-md-12 col-sm-6">    
                                             
                                             <h2>{{ $product->nome }}  
+                                            @if(!$flagpub)
+                                              @can('isStaff')
+                                                <a href="{{ route('delproduct',[$product->idProdotto])}}"> 
+                                                    <img src="{{ asset('images/x-delete.png') }} " width="60" height="60" alt="none" align="right"> 
+                                                </a>
+                                              @endcan
+                                            @endif
                                             
-                                            @can('isStaff')
-                                            <a href="{{ route('delproduct')}}"> 
-                                                <img src="{{ asset('images/x-delete.png') }} " width="60" height="60" alt="none" align="right"> 
-                                            </a>
-                                            @endcan
                                             
                                             </h2>
                                           

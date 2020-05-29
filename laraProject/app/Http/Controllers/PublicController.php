@@ -13,23 +13,34 @@ class PublicController extends Controller {
     }
 
     public function showCatalog() {
-
+        $route = request()->route()->getName();
+        
+        if($route=='catalog1') 
+            $flagPub=true;
+        else 
+            $flagPub=false;
         //Categorie
         $cats = $this->_catalogModel->getCats();
         
         //Prodotti di tutte le categorie
         $prods = $this->_catalogModel->getProdsByCat($cats->map->only(['idCategoria']));
-
+        
         return view('catalog')
                         ->with('categories', $cats)
-                        ->with('products', $prods);                
+                        ->with('products', $prods) 
+                        ->with('flagpub',$flagPub);
     }
 
     public function showCategories($catId) {
-
+        $route = request()->route()->getName();
+        
+        if($route=='catalog2') 
+            $flagPub=true;
+        else
+            $flagPub=false;
         //Categorie
         $cats = $this->_catalogModel->getCats();
-
+        
         //Categoria selezionata
         $selCat = $cats->where('idCategoria', $catId)->first();
 
@@ -43,11 +54,17 @@ class PublicController extends Controller {
                         ->with('categories', $cats)
                         ->with('selectedCat', $selCat)
                         ->with('subCategories', $subCats)
-                        ->with('products', $prods);
+                        ->with('products', $prods)
+                        ->with('flagpub',$flagPub);
         }
 
     public function showSubCategories($catId, $sotCatId) {
-
+        $route = request()->route()->getName();
+        
+        if($route=='catalog3') 
+            $flagPub=true;
+        else 
+            $flagPub=false;
         //Categorie
         $cats = $this->_catalogModel->getCats();
 
@@ -64,7 +81,8 @@ class PublicController extends Controller {
                         ->with('categories', $cats)
                         ->with('selectedCat', $selCat)
                         ->with('subCategories', $subCats)
-                        ->with('products', $prods);
+                        ->with('products', $prods)
+                        ->with('flagpub',$flagPub);
     }
     
 }

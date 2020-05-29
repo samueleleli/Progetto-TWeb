@@ -59,9 +59,13 @@ class StaffController extends Controller {
         return redirect()->action('StaffController@index');
     }
     
-    public function removeProduct(){
+    public function removeProduct($idProd){
         
+        
+        
+        Product::find($idProd)->delete();
       
+        return redirect()->action('StaffController@index');
     }
 
 }

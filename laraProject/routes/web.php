@@ -16,14 +16,25 @@ Route::view('/', 'home')
         ->name('home');
 
 // Rotte per il catalogo
-Route::get('/catalog', 'PublicController@showCatalog',['flag' => 'true'])
+Route::get('/catalog', 'PublicController@showCatalog')
         ->name('catalog1');
+
+Route::get('/catalog/del', 'PublicController@showCatalog')
+        ->name('catalogdel')->middleware('can:isStaff');
+
 
 Route::get('/catalog/selCat/{catId}', 'PublicController@showCategories')
         ->name('catalog2');
 
+Route::get('/catalog/del/selCat/{catId}', 'PublicController@showCategories')
+        ->name('catalog2Staff')->middleware('can:isStaff');
+
 Route::get('/catalog/selCat/{catId}/selSotCat/{sotCatId}', 'PublicController@showSubCategories')
         ->name('catalog3');
+
+Route::get('/catalog/del/selCat/{catId}/selSotCat/{sotCatId}', 'PublicController@showSubCategories')
+        ->name('catalog3Staff')->middleware('can:isStaff');
+
 
 // Rotte per l'autenticazione
 Route::get('login', 'Auth\LoginController@showLoginForm')
@@ -57,7 +68,7 @@ Route::get('/modCat', 'StaffController@menuStaff')
 
 
 
-Route::get('/delProd', 'StaffController@showCatalog')
+Route::get('/delProd/{idProd}', 'StaffController@removeProduct')
         ->name('delproduct')->middleware('can:isStaff');
 
 Route::get('/newproduct', 'StaffController@addProduct')

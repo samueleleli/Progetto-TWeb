@@ -21,7 +21,7 @@ class Catalog {
 
         $prods = Product::whereHas('prodSubCat', function ($query) use ($catId) {
                         $query->whereIn('idCategoria', $catId);
-        });
+        });       
         if ($discounted) {
             $prods = $prods->where('flagSconto', true);
         }
@@ -42,5 +42,5 @@ class Catalog {
             $prods = $prods->orderBy('percSconto', $order);
         }
         return $prods->paginate($paged);
-    }
+    }    
 }
