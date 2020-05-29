@@ -16,7 +16,7 @@ Route::view('/', 'home')
         ->name('home');
 
 // Rotte per il catalogo
-Route::get('/catalog', 'PublicController@showCatalog')
+Route::get('/catalog', 'PublicController@showCatalog',['flag' => 'true'])
         ->name('catalog1');
 
 Route::get('/catalog/selCat/{catId}', 'PublicController@showCategories')

@@ -32,14 +32,13 @@ class StaffController extends Controller {
     }
 
     public function storeProduct(NewProductRequest $request) {
-
-      if ($request->hasFile('image')) {
-            $image = $request->file('image');
+        
+      if ($request->hasFile('immagine')) {
+            $image = $request->file('immagine');
             $imageName = $image->getClientOriginalName();
         } else {
             $imageName = NULL;
         }
-      
         $product = new Product;
         
         $product->fill($request->validated());
@@ -55,7 +54,7 @@ class StaffController extends Controller {
         if (!is_null($imageName)) {
             $destinationPath = public_path() . '/images/products';
             $image->move($destinationPath, $imageName);
-        };
+        }
 
         return redirect()->action('StaffController@index');
     }

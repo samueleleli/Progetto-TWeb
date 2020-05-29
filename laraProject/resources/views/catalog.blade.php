@@ -9,8 +9,8 @@
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
                        
-                         @can('isStaff')
-                            <h2>Elimina Prodotti</h2>
+                         @can('isStaff')                           
+                         <h2>Elimina Prodotti</h2>                          
                          @else
                             <h2>Catalogo Prodotti</h2>
                          @endcan

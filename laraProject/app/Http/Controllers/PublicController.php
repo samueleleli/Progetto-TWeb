@@ -22,7 +22,7 @@ class PublicController extends Controller {
 
         return view('catalog')
                         ->with('categories', $cats)
-                        ->with('products', $prods);
+                        ->with('products', $prods);                
     }
 
     public function showCategories($catId) {
