@@ -21,8 +21,9 @@
             
             {{ Form::open(array('route' => 'register')) }}
        
-            <div class="center">
-                <div id="customer_details" class="form-width">
+            <div class="center form-width">
+                
+                <div id="customer_details" >
                     <div class="col-5 form-login-signup">
                         <h3>REGISTRAZIONE</h3>
                         <p>

@@ -16,8 +16,8 @@ h6 {
 img {
     max-width: 100%;
     height: auto;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     border: 10px; 
 }
 
@@ -211,6 +211,7 @@ a:hover, a:focus {color: #17a78b}
 
 .single-sidebar {
     margin-bottom: 50px;
+    margin-right: 60px;
 }
 
 .single-sidebar > ul {
@@ -329,7 +330,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 .form-login-signup {
     background: none repeat scroll 0 0 #f4f4f4;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 10px 30px 10px;;
 }
 
 
@@ -411,6 +412,12 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     width: 10px;
 }
 
+.rounded-corner{
+  border-radius: 25px;
+  border: 2px solid #00a86b;
+  margin-bottom: 20px;
+  margin-left: 20px
+}
 /*
  *
  *

@@ -30,18 +30,11 @@
                 <div class="row">
                     
                     <div class="pulsante_staff">
-                        <a href="{{ route('catalogdel') }}">Elimina Prodotto</a>
+                        <a href="{{ route('catalogmod') }}">Modifica o Elimina un Prodotto</a>
                     </div>
                         
-                </div>
-                <div class="row">
-                    
-                    <div class="pulsante_staff">
-                        <a href="{{ route('selproduct') }}">Modifica Prodotto</a>
-                    </div>
-                        
-                </div>
-                   </div>       
+                </div>  
+              </div>       
             </div>
                   
             

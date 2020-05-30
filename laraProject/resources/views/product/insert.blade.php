@@ -9,7 +9,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="product-bit-title text-center">
-                    <h2>Inserimento Prodotto</h2>
+                    @if(!$flagAgg)
+                      <h2>Inserimento Prodotto</h2> 
+                    @else 
+                      <h2>Aggiorna Prodotto</h2>
+                    @endif  
                 </div>
             </div>
         </div>
@@ -21,12 +25,18 @@
         <div class="center">
             <div class="row">
                 <div class="center">
-                    {{ Form::open(array('route' => 'newproduct.store', 'files' => true)) }}        
+                    @if(!$flagAgg) {{ Form::open(array('route' => 'newproduct.store', 'files' => true)) }}
+                    @else 
+                       {{ Form::open(array('route' => 'newproduct.update','files' => true)) }}
+                       {{ Form::hidden('id',$prod->idProdotto)}}
+                    @endif
                     <div id="customer_details" class="col2-set">
                         <div class="col-4">
                             <p>
                                 {{Form::label('nome','Nome Prodotto')}}
-                                {{Form::text('nome','',['id' => 'nome'])}}
+                                @if(!$flagAgg) {{Form::text('nome','',['id' => 'nome'])}}
+                                @else {{Form::text('nome',$prod->nome,['id' => 'nome'])}}
+                                @endif
                                 @if ($errors->first('nome_prodotto'))
                             <ul class="errors">
                                 @foreach ($errors->get('nome_prodotto') as $message)
@@ -37,7 +47,9 @@
                             </p>
                             <p>
                                 {{ Form::label('idSottocategoria', 'Categoria', ['class' => 'label-input']) }}
-                                {{Form::select('idSottocategoria', $cats,' ',['id' => 'idSottocategoria'])}}
+                                @if(!$flagAgg) {{Form::select('idSottocategoria', $cats,' ',['id' => 'idSottocategoria'])}}
+                                @else {{Form::select('idSottocategoria', $cats,$prod->idSottocategoria,['id' => 'idSottocategoria'])}}
+                                @endif
                                 @if ($errors->first('catId'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('catId') as $message)
@@ -51,9 +63,10 @@
                                 {{ Form::file('immagine', ['class' => 'input', 'id' => 'immagine']) }}
                             </p>                                     
                             <p>
-                                {{Form::label('descrBreve','Descrizione Breve')}}
-                                {{Form::textarea('descrBreve','',['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
-                                @if ($errors->first('descrizione_breve'))                            
+                               @if(!$flagAgg)  {{Form::label('descrBreve','Descrizione Breve')}}
+                               @else {{Form::textarea('descrBreve',$prod->descrBreve,['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
+                               @endif  
+                               @if ($errors->first('descrizione_breve'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('descrizione_breve') as $message)
                                 <li>{{ $message }}</li>
@@ -63,7 +76,11 @@
                             </p>
                             <p>
                                 {{Form::label('descrEstesa','Descrizione Estesa')}}
-                                {{Form::textarea('descrEstesa','',['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
+                                @if(!$flagAgg) {{Form::textarea('descrEstesa','',['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
+                                @else 
+                                {{Form::textarea('descrEstesa',$prod->descrEstesa,['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
+                                
+                                @endif
                                 @if ($errors->first('descrizione_estesa'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('descrizione_estesa') as $message)
@@ -73,8 +90,10 @@
                             @endif
                             </p>
                             <p>
-                                {{Form::label('prezzo','Prezzo')}}
-                                {{Form::text('prezzo','',['id' => 'prezzo'])}}
+                                {{Form::label('prezzo','Prezzo (€)')}}
+                                @if(!$flagAgg) {{Form::text('prezzo','',['id' => 'prezzo'])}}
+                                @else {{Form::text('prezzo',$prod->prezzo,['id' => 'prezzo'])}}
+                                @endif
                                 @if ($errors->first('prezzo'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('prezzo') as $message)
@@ -85,7 +104,9 @@
                             </p>
                             <p>
                                 {{Form::label('percSconto','Percentuale di sconto (%)')}}
-                                {{Form::text('percSconto','',['id' => "percSconto"])}}
+                                @if(!$flagAgg) {{Form::text('percSconto','',['id' => "percSconto"])}}
+                                @else {{Form::text('percSconto',$prod->percSconto,['id' => "percSconto"])}}
+                                @endif
                             @if ($errors->first('percSconto'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('percSconto') as $message)
@@ -97,8 +118,9 @@
                         </div>
                     </div>
                     <div class="form-row place-order">
-                        {{ Form::submit('Inserisci Prodotto', ['class' => 'button']) }}
-
+                        @if(!$flagAgg) {{ Form::submit('Inserisci Prodotto', ['class' => 'button']) }}
+                        @else {{ Form::submit('Aggiorna Prodotto', ['class' => 'button']) }}
+                        @endif
                     </div>
                     {{Form::close()}}
                 </div>

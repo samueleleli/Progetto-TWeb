@@ -23,12 +23,24 @@ class StaffController extends Controller {
         return view('product.modificaCat');
     }
 
-    public function addProduct() {
-       
+    public function addProduct($id=-1) {
+        $route = request()->route()->getName();
         $prodCats = $this->_staffModel->getProdsCats()->pluck('sottoCategoria', 'idsottoCategoria');
-        
-        return view('product.insert')
-                        ->with('cats', $prodCats);
+        if($route=='newproduct'){
+            $flagAgg=false;
+            return view('product.insert')
+                        ->with('cats', $prodCats)
+                        ->with('flagAgg', $flagAgg);
+        }
+        else{
+            $prod = $this->_staffModel->getProdData($id);
+            $flagAgg=true;
+            return view('product.insert')
+                        ->with('cats', $prodCats)
+                        ->with('flagAgg', $flagAgg)
+                        ->with('prod',$prod);        
+        } 
+                  
     }
 
     public function storeProduct(NewProductRequest $request) {
@@ -40,7 +52,7 @@ class StaffController extends Controller {
             $imageName = NULL;
         }
         $product = new Product;
-        
+
         $product->fill($request->validated());
         if($product->percSconto == 0){
             $product->flagSconto=0;
@@ -49,7 +61,11 @@ class StaffController extends Controller {
             $product->flagSconto=1;
         }
         $product->immagine = $imageName;
-        $product->save();
+        $route = request()->route()->getName();
+        if($route == 'newproduct.store')
+         $product->save();
+        else   
+         Product::find($request->id)->update($product->toArray ());
         
         if (!is_null($imageName)) {
             $destinationPath = public_path() . '/images/products';

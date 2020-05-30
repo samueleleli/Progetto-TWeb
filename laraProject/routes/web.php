@@ -19,20 +19,20 @@ Route::view('/', 'home')
 Route::get('/catalog', 'PublicController@showCatalog')
         ->name('catalog1');
 
-Route::get('/catalog/del', 'PublicController@showCatalog')
-        ->name('catalogdel')->middleware('can:isStaff');
+Route::get('/catalog/mod', 'PublicController@showCatalog')
+        ->name('catalogmod')->middleware('can:isStaff');
 
 
 Route::get('/catalog/selCat/{catId}', 'PublicController@showCategories')
         ->name('catalog2');
 
-Route::get('/catalog/del/selCat/{catId}', 'PublicController@showCategories')
+Route::get('/catalog/mod/selCat/{catId}', 'PublicController@showCategories')
         ->name('catalog2Staff')->middleware('can:isStaff');
 
 Route::get('/catalog/selCat/{catId}/selSotCat/{sotCatId}', 'PublicController@showSubCategories')
         ->name('catalog3');
 
-Route::get('/catalog/del/selCat/{catId}/selSotCat/{sotCatId}', 'PublicController@showSubCategories')
+Route::get('/catalog/mod/selCat/{catId}/selSotCat/{sotCatId}', 'PublicController@showSubCategories')
         ->name('catalog3Staff')->middleware('can:isStaff');
 
 
@@ -71,11 +71,17 @@ Route::get('/modCat', 'StaffController@menuStaff')
 Route::get('/delProd/{idProd}', 'StaffController@removeProduct')
         ->name('delproduct')->middleware('can:isStaff');
 
+Route::get('/newProd/{idProd}', 'StaffController@addProduct')
+        ->name('modproduct')->middleware('can:isStaff');
+
 Route::get('/newproduct', 'StaffController@addProduct')
         ->name('newproduct')->middleware('can:isStaff');
 
-Route::post('/newproduct', 'StaffController@storeProduct')
-        ->name('newproduct.store');
+Route::post('/storeProd', 'StaffController@storeProduct')
+        ->name('newproduct.store')->middleware('can:isStaff');
+
+Route::post('/updateProd', 'StaffController@storeProduct')
+        ->name('newproduct.update')->middleware('can:isStaff');
 
 Route::get('/modCat/selproduct', 'StaffController@selectProduct')
         ->name('selproduct')->middleware('can:isStaff');

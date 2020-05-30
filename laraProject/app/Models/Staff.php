@@ -14,5 +14,9 @@ class Staff {
         }
         return $Allcategory;
     }
-
+    
+    public function getProdData($id) {
+        $prod = Product::where('idProdotto',$id)->first();
+        return $prod;
+    }
 }
