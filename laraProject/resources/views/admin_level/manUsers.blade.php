@@ -26,11 +26,11 @@
                         </div>
                         
                         <div class="woocommerce-info">
-                            <a  href="" >Clicca qui per modificare i dati  degli utenti Staff o per eliminarli</a>
+                            <a  href="{{ route('manStaff') }}" >Clicca qui per modificare i dati  degli utenti Staff o per eliminarli</a>
                         </div>
                         
                         <div class="woocommerce-info">
-                            <a href="">Clicca qui per eliminare un cliente registrato</a>
+                            <a href="{{ route('delClient') }}">Clicca qui per eliminare un cliente registrato</a>
                         </div>                       
                     </div>
                 </div>

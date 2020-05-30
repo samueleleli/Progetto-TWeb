@@ -94,3 +94,21 @@ Route::get('/newStaff', 'AdminController@insertStaff')
 
 Route::post('/newStaff', 'AdminController@storeStaff')
         ->name('newStaff.store');
+        
+Route::get('/delClient', 'AdminController@showClient')
+        ->name('delClient');
+
+Route::post('/delClient', 'AdminController@deleteClient')
+        ->name('delClient.delete');
+
+Route::get('/manStaff', 'AdminController@showStaff')
+        ->name('manStaff');
+
+Route::post('/manStaff', 'AdminController@manageStaff')
+        ->name('manStaff.manage');
+
+Route::get('/modStaff', 'AdminController@showDataStaff')
+        ->name('modStaff');
+
+Route::post('/modStaff', 'AdminController@editStaff')
+        ->name('modStaff.edit');
