@@ -45,14 +45,16 @@ class StaffController extends Controller {
 
     public function storeProduct(NewProductRequest $request) {
         
-      if ($request->hasFile('immagine')) {
-            $image = $request->file('immagine');
-            $imageName = $image->getClientOriginalName();
-        } else {
-            $imageName = NULL;
-        }
+      
         $product = new Product;
 
+        if ($request->hasFile('immagine')) {
+            $image = $request->file('immagine');
+            $imageName = $image->getClientOriginalName();
+         } else {
+            $imageName = NULL;
+         }
+                                
         $product->fill($request->validated());
         if($product->percSconto == 0){
             $product->flagSconto=0;
@@ -60,27 +62,42 @@ class StaffController extends Controller {
         else{
             $product->flagSconto=1;
         }
-        $product->immagine = $imageName;
-        $route = request()->route()->getName();
-        if($route == 'newproduct.store')
-         $product->save();
-        else   
-         Product::find($request->id)->update($product->toArray ());
         
-        if (!is_null($imageName)) {
+        
+        $route = request()->route()->getName();
+        if($route == 'newproduct.store'){
+               
+         $product->immagine = $imageName;
+         
+         $product->save();
+        }
+        else {
+            $oldPhoto = $request->oldPhoto;             
+             if($oldPhoto!="void"){
+                 if(!is_null($imageName)){
+                     $product->immagine = $imageName;
+                 }
+                 else{
+                     $product->immagine = $oldPhoto;                     
+                 }
+             }
+             else{
+                 $product->immagine = $imageName;
+             }
+            Product::find($request->id)->update($product->toArray());
+   
+        }
+        if (!is_null($imageName)) {   
             $destinationPath = public_path() . '/images/products';
             $image->move($destinationPath, $imageName);
-        }
-
+         }
         return redirect()->action('StaffController@index');
     }
     
     public function removeProduct($idProd){
         
-        
-        
         Product::find($idProd)->delete();
-      
+        
         return redirect()->action('StaffController@index');
     }
 

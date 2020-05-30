@@ -10,9 +10,9 @@
             <div class="col-md-12">
                 <div class="product-bit-title text-center">
                     @if(!$flagAgg)
-                      <h2>Inserimento Prodotto</h2> 
+                    <h2>Inserimento Prodotto</h2> 
                     @else 
-                      <h2>Aggiorna Prodotto</h2>
+                    <h2>Aggiorna Prodotto</h2>
                     @endif  
                 </div>
             </div>
@@ -27,8 +27,11 @@
                 <div class="center">
                     @if(!$flagAgg) {{ Form::open(array('route' => 'newproduct.store', 'files' => true)) }}
                     @else 
-                       {{ Form::open(array('route' => 'newproduct.update','files' => true)) }}
-                       {{ Form::hidden('id',$prod->idProdotto)}}
+                    {{ Form::open(array('route' => 'newproduct.update','files' => true)) }}
+                    {{ Form::hidden('id',$prod->idProdotto)}}
+                        @if($prod->immagine != '') {{ Form::hidden('oldPhoto',$prod->immagine)}}
+                        @else {{ Form::hidden('oldPhoto','void')}}
+                        @endif  
                     @endif
                     <div id="customer_details" class="col2-set">
                         <div class="col-4">
@@ -58,15 +61,20 @@
                             </ul>
                             @endif
                             </p>
+                            @if($flagAgg)
+                            <h5><b>Immagine attuale:</b></h5>
+                            @include('helpers/productImg', ['imgFile' => $prod->immagine])
+                            @endif
                             <p>
                                 {{ Form::label('immagine', 'Immagine', ['class' => 'label-input']) }}
                                 {{ Form::file('immagine', ['class' => 'input', 'id' => 'immagine']) }}
                             </p>                                     
                             <p>
-                               @if(!$flagAgg)  {{Form::label('descrBreve','Descrizione Breve')}}
-                               @else {{Form::textarea('descrBreve',$prod->descrBreve,['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
-                               @endif  
-                               @if ($errors->first('descrBreve'))                            
+                                {{Form::label('descrBreve','Descrizione Breve')}}
+                                @if(!$flagAgg)  {{Form::textarea('descrBreve','',['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
+                                @else {{Form::textarea('descrBreve',$prod->descrBreve,['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
+                                @endif  
+                                @if ($errors->first('descrBreve'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('descrBreve') as $message)
                                 <li>{{ $message }}</li>
@@ -79,7 +87,7 @@
                                 @if(!$flagAgg) {{Form::textarea('descrEstesa','',['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
                                 @else 
                                 {{Form::textarea('descrEstesa',$prod->descrEstesa,['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
-                                
+
                                 @endif
                                 @if ($errors->first('descrEstesa'))                            
                             <ul class="errors">
@@ -107,7 +115,7 @@
                                 @if(!$flagAgg) {{Form::text('percSconto','',['id' => "percSconto"])}}
                                 @else {{Form::text('percSconto',$prod->percSconto,['id' => "percSconto"])}}
                                 @endif
-                            @if ($errors->first('percSconto'))                            
+                                @if ($errors->first('percSconto'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('percSconto') as $message)
                                 <li>{{ $message }}</li>

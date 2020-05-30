@@ -4,4 +4,4 @@
         }
 
 @endphp
-<img src="{{ asset('images/products/' . $imgFile) }}" alt="">
+<img src="{{ asset('images/products/' . $imgFile) }}" alt="" >

@@ -18,7 +18,7 @@
          <div class="maincontent-area">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <img src="{{ asset('images/home_image.jpg') }}" alt="none" >
+                    <img src="{{ asset('images/home_image.jpg') }}" alt="Home Image" >
                 </div>
             </div>
             <div class="container">
