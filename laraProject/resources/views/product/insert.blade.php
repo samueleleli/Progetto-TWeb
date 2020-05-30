@@ -37,9 +37,9 @@
                                 @if(!$flagAgg) {{Form::text('nome','',['id' => 'nome'])}}
                                 @else {{Form::text('nome',$prod->nome,['id' => 'nome'])}}
                                 @endif
-                                @if ($errors->first('nome_prodotto'))
+                                @if ($errors->first('nome'))
                             <ul class="errors">
-                                @foreach ($errors->get('nome_prodotto') as $message)
+                                @foreach ($errors->get('nome') as $message)
                                 <li>{{ $message }}</li>
                                 @endforeach
                             </ul>
@@ -50,9 +50,9 @@
                                 @if(!$flagAgg) {{Form::select('idSottocategoria', $cats,' ',['id' => 'idSottocategoria'])}}
                                 @else {{Form::select('idSottocategoria', $cats,$prod->idSottocategoria,['id' => 'idSottocategoria'])}}
                                 @endif
-                                @if ($errors->first('catId'))                            
+                                @if ($errors->first('idSottocategoria'))                            
                             <ul class="errors">
-                                @foreach ($errors->get('catId') as $message)
+                                @foreach ($errors->get('idSottocategoria') as $message)
                                 <li>{{ $message }}</li>
                                 @endforeach
                             </ul>
@@ -66,9 +66,9 @@
                                @if(!$flagAgg)  {{Form::label('descrBreve','Descrizione Breve')}}
                                @else {{Form::textarea('descrBreve',$prod->descrBreve,['id' => 'descrBreve','cols'=>'30', 'rows'=>'5'])}}
                                @endif  
-                               @if ($errors->first('descrizione_breve'))                            
+                               @if ($errors->first('descrBreve'))                            
                             <ul class="errors">
-                                @foreach ($errors->get('descrizione_breve') as $message)
+                                @foreach ($errors->get('descrBreve') as $message)
                                 <li>{{ $message }}</li>
                                 @endforeach
                             </ul>
@@ -81,9 +81,9 @@
                                 {{Form::textarea('descrEstesa',$prod->descrEstesa,['id' => 'descrEstesa','cols'=>'30', 'rows'=>'10'])}}
                                 
                                 @endif
-                                @if ($errors->first('descrizione_estesa'))                            
+                                @if ($errors->first('descrEstesa'))                            
                             <ul class="errors">
-                                @foreach ($errors->get('descrizione_estesa') as $message)
+                                @foreach ($errors->get('descrEstesa') as $message)
                                 <li>{{ $message }}</li>
                                 @endforeach
                             </ul>
