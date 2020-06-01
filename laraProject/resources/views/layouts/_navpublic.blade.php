@@ -8,6 +8,7 @@
                             <li><a href="{{ route('catalog1') }}">Catalogo Prodotti</a></li>
                             
                             @can('isUser')
+                            <li><a href="{{ route('modData') }}">Modifica Profilo</a></li>
                             <li><a href="{{ route('user') }}">Profilo</a></li>
                             @endcan
                             

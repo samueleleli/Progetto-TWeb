@@ -18,7 +18,9 @@
 
 <div class="admin-profile">
     <h3>Benvenuto {{ Auth::user()->nome }} {{ Auth::user()->cognome }}</h3>
-    <p> In questa sezione l'utente ha la possibilità di modificare i suoi dati personali. </p>
+    <p> Tramite la sezione "Modifica Profilo" presente nel menù puoi modificare i tuoi dati personali.<br>
+        Invece tramite la sezione "Catalogo prodotti" puoi visitare il catalogo per gli utenti registrati. 
+    </p>
 </div>
 
 @endsection
