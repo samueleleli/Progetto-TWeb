@@ -107,7 +107,7 @@ Route::get('/manStaff', 'AdminController@showStaff')
 Route::post('/manStaff', 'AdminController@manageStaff')
         ->name('manStaff.manage');
 
-Route::get('/modStaff', 'AdminController@showDataStaff')
+Route::get('/modStaff/{username}', 'AdminController@showDataStaff')
         ->name('modStaff');
 
 Route::post('/modStaff', 'AdminController@editStaff')

@@ -73,16 +73,21 @@ class AdminController extends Controller {
         return redirect()->action('AdminController@index'); 
         
         } else if($button == 'edit') {
-            return redirect()->action('AdminController@showDataStaff', [$request]);
+            return redirect()->action('AdminController@showDataStaff', [$request->radioButton]);
                         
         } 
     }
     
-    public function showDataStaff(ManageStaffRequest $request) {
-        $staff = User::where('username', $request->radioButton)->get();
+    public function showDataStaff($username) {
+        $staff = User::where('username', $username)->get();
         return view('admin_level.editStaff') ->with('users', $staff);
     }
     
+    /*public function showDataStaff(ManageStaffRequest $request) {
+        $staff = User::where('username', $request->radioButton)->get();
+        return view('admin_level.editStaff') ->with('users', $staff);
+    }
+    */
     public function editStaff(EditStaffRequest $request) {
         User::where('username', $request->username)->update(array(
                          'nome'=>$request->nome, 'cognome'=>$request->cognome, 'password' => Hash::make($request->password) ));
