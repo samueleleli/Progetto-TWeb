@@ -95,7 +95,12 @@ class StaffController extends Controller {
     }
     
     public function removeProduct($idProd){
-        
+        $prod = $this->_staffModel->getProdData($idProd);
+        $imageName = $prod -> immagine;
+        if(!is_null($imageName)){ 
+            $file_path = public_path().'/images/products/'.$prod -> immagine;
+            unlink($file_path);
+        }
         Product::find($idProd)->delete();
         
         return redirect()->action('StaffController@index');
