@@ -414,7 +414,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 
 .rounded-corner{
   border-radius: 25px;
-  border: 2px solid #00a86b;
+  border: 2px solid #1abc9c;
   margin-bottom: 20px;
   margin-left: 20px
 }
