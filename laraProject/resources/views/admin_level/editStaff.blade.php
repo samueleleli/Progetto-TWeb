@@ -22,8 +22,7 @@
             
             {{ Form::open(array('route' => 'modStaff.edit')) }}
        
-            <div class="center">
-                <div id="customer_details" class="form-width">
+                <div id="customer_details" class="form-width center">
                     <div class="col-5 form-login-signup">
                         <h3>MODIFICA I DATI</h3>
                         @foreach ($users as $user)
@@ -38,6 +37,7 @@
                             </ul>
                             @endif
                         </p>
+                        
                         <p>
                             {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
                             {{ Form::text('nome', $user->nome, ['class' => 'input', 'id' => 'nome']) }}
@@ -50,7 +50,6 @@
                             @endif
                         </p>
                             
-                
                         <p>
                             {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
                             {{ Form::text('cognome', $user->cognome, ['class' => 'input', 'id' => 'cognome']) }}
@@ -80,15 +79,16 @@
                             Tutti i campi sono richiesti. <br>
                             Compilare con i valori attuali i campi che non si desiderano modificare.
                         </p>
+                        
                         <p>
                             {{ Form::submit('Modifica', ['class' => 'button']) }}
                         </p>
                         
                     </div>
                 </div>
-                {{ Form::close() }}
-            </div>
-        
+            
+            {{ Form::close() }}
+            
         </div>    
     </div>                    
 </div>
