@@ -25,7 +25,7 @@
                 <div id="customer_details" class="form-width center">
                     <div class="col-5 form-login-signup">
                         <h3>MODIFICA I DATI</h3>
-                        @foreach ($users as $user)
+
                         <p>
                             {{ Form::label('username', 'Username', ['class' => 'label-input']) }}
                             {{ Form::text('username', $user->username, ['class' => 'input', 'id' => 'username', 'readonly' => 'readonly']) }}
@@ -73,7 +73,6 @@
                             </ul>
                             @endif
                         </p>
-                        @endforeach
                         <p>
                             Lo username non è modificabile. <br>
                             Tutti i campi sono richiesti. <br>

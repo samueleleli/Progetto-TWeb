@@ -79,8 +79,8 @@ class AdminController extends Controller {
     }
     
     public function showDataStaff($username) {
-        $staff = User::where('username', $username)->get();
-        return view('admin_level.editStaff') ->with('users', $staff);
+        $staff = User::where('username', $username)->first();
+        return view('admin_level.editStaff') ->with('user', $staff);
     }
     
     /*public function showDataStaff(ManageStaffRequest $request) {
