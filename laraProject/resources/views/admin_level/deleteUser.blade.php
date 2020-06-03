@@ -34,7 +34,7 @@
                     @foreach ($users as $user)
                     <tr>
                         <td>
-                           {{Form::radio('radioButton['.$user->id.']', $user->username )}}  <!--('name', 'value') -->
+                           {{Form::checkbox('check['.$user->id.']', $user->username )}}  <!--('name', 'value') -->
                         </td>
                         <td>
                             <span>{{ $user->username }}</span>
@@ -52,8 +52,8 @@
                     @endforeach
                     
                     <tr>
-                        <td class="button_delete" colspan="6">
-                            {{ Form::submit('Elimina Cliente') }}
+                        <td class="button_delete_user" colspan="6">
+                            {{ Form::submit('Elimina') }}
                         </td>
                     </tr>
                 </tbody>

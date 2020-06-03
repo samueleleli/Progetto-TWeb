@@ -461,39 +461,14 @@ table.shop_table td.product-name a:hover {color: #1ABC9C;text-decoration: none}
 }
 
 .button_editStaff >  button[type=submit]{
-    
     font-weight: bold;
     float: right;
 }
 
-
-
-
-/*
- *
- *
- *
- *
- * FINE CLASSI USATE
- *
- *
- *
- *
- */
-
-/*
- *
- *ALLA FINE LE CLASSI PER ORA NON USATE STARANNO NEL FILE style_NON_IN_USO
- *HO ELIMINATO LA PARTE QUA SOTTO DI CLASSI NON ANCORA UTILIZZATE, QUINDI SE FACCIO RUN NON AVRO' IL LAYOUT GIUSTO
- *SE DOVESSIMO FARE DELLE PROVE DOVREMO INCOLLARE IL CONTENUTO DI style_NON_IN_USO QUI SOTTO
- *OGNI VOLTA CHE AGGIUNGEREMO ELEMENTI DI LAYOUT DOBBIAMO ASSICURARCI CHE LE CLASSI USATE
- *SONO IN BOOTSTRAP O NEL FILE style.css, SE INVECE SONO NEL FILE style_NON_IN_USO
- *DOVREMO TAGLIARLE E INCOLLARLE IN QUESTO FILE
- *
- *
- *
- */
-
+.button_delete_user >  input[type="submit"]{
+    background: none repeat scroll 0 0 #FF0000;
+    font-weight: bold;
+}
 
 
 

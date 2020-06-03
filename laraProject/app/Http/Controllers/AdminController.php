@@ -53,7 +53,7 @@ class AdminController extends Controller {
     }
     
     public function deleteClient(DeleteClientRequest $request) { 
-        $usernameToDelete = $request->get('radioButton');
+        $usernameToDelete = $request->get('check');
         foreach($usernameToDelete as $username) {
         User::where('username', $username)->delete();
         }
