@@ -34,7 +34,7 @@
                     @foreach ($users as $user)
                     <tr>
                         <td>
-                           {{Form::radio('radioButton', $user->username )}}  <!--('name', 'value') -->
+                           {{Form::radio('radioButton['.$user->id.']', $user->username )}}  <!--('name', 'value') -->
                         </td>
                         <td>
                             <span>{{ $user->username }}</span>
