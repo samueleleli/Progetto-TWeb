@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use App\User;
+
 
 class DeleteClientRequest extends FormRequest {
 
@@ -24,9 +24,7 @@ class DeleteClientRequest extends FormRequest {
      *
      * @return array
      */
-    
-    
-    
+     
     public function rules() {
         return [
             'radioButton' => 'required'
