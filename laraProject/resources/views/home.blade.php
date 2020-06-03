@@ -18,7 +18,7 @@
          <div class="maincontent-area">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <img src="{{ asset('images/home_image.jpg') }}" alt="Home Image" >
+                    <img src="{{ asset('images/img_home.png') }}" alt="Home Image" >
                 </div>
             </div>
             <div class="container">
@@ -31,12 +31,12 @@
                                 tecnologici di ultima generazione! Negli ultimi anni i clienti sono diventati sempre più interessati alla
                                 tecnologia, tra le informazioni richieste non c'è più solo il nome del prodotto, ma anche specifiche tecniche e
                                 modalità d'uso. Proprio per questo, noi di eElectronics, abbiamo deciso di portavi questa novità, da oggi potrete
-                                visualizzare tutti i prodotti disponibili da un'unica pagina, così da rendere la vostra esperienza shopping
-                                veloce e moderna. Tra le informazioni di ogni prodotto potrete trovare: descrizione breve ed estesa, specifiche
-                                tecniche, foto del prodotto e prezzo. Per i nostri clienti più affezionati abbiamo incluso uno sconto in caso di
-                                iscrizione al nostro sito!<br>
+                                visualizzare tutti i prodotti disponibili da un'unica pagina, così da rendere la vostra esperienza di shopping
+                                veloce e moderna. Tra le informazioni di ogni prodotto potrete trovare: una descrizione breve ed una estesa per le specifiche
+                                tecniche, la foto del prodotto se disponibile e il prezzo. Per i nostri clienti più affezionati che decidono di iscriversi al sito,
+                                abbiamo incluso la possibilità di visualizzare se i prodotti sono in sconto!<br>
                                 
-                                <b>(Nota: La relazione del Gruppo la si potrà visualizzare cliccando sul link "Group 13" in basso nel footer della pagina.)</b>
+                                
                             </div>
                         </div>
                         <div class="latest-product">
@@ -50,7 +50,6 @@
                                 Raccogliamo le ultime novità tecnologiche e manteniamo costante la disponibilità dei prodotti.
                                 Forniamo consigli e soluzioni a chi ne ha bisogno con un'attenzione sempre rivolta all'innovazione.
                                 Offriamo la miglior tecnologia ai prezzi più bassi del mercato.
-                                Siamo distribuiti su tutto il territorio nazionale, così puoi venirci a trovare quando vuoi, e i nostri store sono ordinati e facili da visitare.
                                 Facciamo tutto questo, e tanto di più, per mettere l’alta tecnologia a disposizione di tutti.
                             </div>
                         </div>
@@ -60,14 +59,22 @@
                                 Per visualizzare i prodotti in vendita, cliccare su "Catalogo
                                 Prodotti", nella pagina troverete le varie categorie di prodotti. Se desiderate
                                 visualizzare solo i prodotti di una categoria, cliccate su uno dei link nella lista a
-                                sinistra della pagina. In caso vogliate filtrare i prodotti da visualizzare, ad esempio
-                                gli Smartphone, cliccate sulla sottocategoria desiderata tra quelle disponibili.
+                                sinistra della pagina. In caso vogliate filtrare ulteriormente i prodotti da visualizzare, potrete
+                                cliccare su una sottocategoria associata alla macrocategoria appena selezionata.<br>
                                 
-                                Per l'acquisto dei prodotti potrete recarvi direttamente in negozio seguendo le indicazioni
-                                stradali fornite in fondo alla pagina.<br>
+                                Per l'acquisto dei prodotti potrete recarvi direttamente in negozio oppure contattarci
+                                tramite email o numero di telefono.<br>
                                 
-                                Se desiderate contattarci per dubbi o informazioni, saremo lieti di rispondervi. Troverete i vari
-                                recapiti in fondo alla pagina, nella sezione "Contatti".
+                                Nella parte inferiore del sito potete trovare la geolocalizzazione della nostra sede e i nostri contatti.<br>
+                                
+                                Saremo lieti di rispondere a qualsiasi vostra richiesta.
+                                
+                            </div>
+                        </div>
+                        <div class="latest-product">
+                            <h2 class="section-title">Relazione</h2>
+                            <div class="product-carousel">
+                                <b>La relazione del Gruppo la si potrà visualizzare cliccando sul link "Group 13" in basso nel footer della pagina.</b>
                             </div>
                         </div>
                     </div>

@@ -137,7 +137,7 @@
 
                         <p>
                             {{ Form::label('dataNascita', 'Data di Nascita', ['class' => 'label-input']) }}
-                            {{ Form::date('dataNascita') }}
+                            {{ Form::date('dataNascita', Auth::user()->dataNascita) }}
                             @if ($errors->first('dataNascita'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('dataNascita') as $message)
@@ -149,7 +149,7 @@
 
                         <p>
                             {{ Form::label('occupazione', 'Occupazione', ['class' => 'label-input']) }}
-                            {{ Form::select('occupazione', ['dipendente' => 'Dipendente', 'libero professionista' => 'Libero Professionista', 'imprenditore' => 'Imprenditore', 'casalinga' => 'Casalinga', 'disoccupato' => 'Disoccupato', 'studente' => 'Studente', 'pensionato' => 'Pensionato'],null, ['placeholder' => 'Seleziona una occupazione']) }}
+                            {{ Form::select('occupazione', ['dipendente' => 'Dipendente', 'libero professionista' => 'Libero Professionista', 'imprenditore' => 'Imprenditore', 'casalinga' => 'Casalinga', 'disoccupato' => 'Disoccupato', 'studente' => 'Studente', 'pensionato' => 'Pensionato'],Auth::user()->occupazione) }}
                             @if ($errors->first('occupazione'))                            
                             <ul class="errors">
                                 @foreach ($errors->get('occupazione') as $message)
