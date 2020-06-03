@@ -1018,7 +1018,7 @@ T                ipo batteria NP-FW50 ',
             ['nome' => 'NomeUser', 'cognome' => 'CognomeUser', 'username' => 'useruser', 'password' => Hash::make('G3BREUJw'),
                 'tipologiaUtente' => 'user', 'created_at' => date("Y-m-d H:i:s"), 'updated_at' => date("Y-m-d H:i:s"),
                 'email' => 'EmailUser@email.com', 'via' => 'ViaUser', 'citta' => 'CittaUser',
-                'cap' => '10000', 'stato' => 'StatoUser', 'occupazione' => 'Studente', 'dataNascita' => '1998-01-15'],
+                'cap' => '10000', 'stato' => 'StatoUser', 'occupazione' => 'studente', 'dataNascita' => '1998-01-15'],
                
             ['nome' => 'NomeStaff', 'cognome' => 'CognomeStaff', 'username' => 'staffstaff',
                 'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'staff', 'created_at' => date("Y-m-d H:i:s"),
