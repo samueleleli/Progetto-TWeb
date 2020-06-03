@@ -1012,15 +1012,18 @@ T                ipo batteria NP-FW50 ',
         DB::table('users')->insert([     
             ['nome' => 'NomeAdmin', 'cognome' => 'CognomeAdmin', 'username' => 'adminadmin',
                 'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'admin', 'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s")],
-            ['nome' => 'NomeUser', 'cognome' => 'CognomeUser', 'username' => 'useruser',
-                'email' => 'EmailUser@email.com', 'via' => 'ViaUser', 'citta' => 'CittaUser', 'cap' => '10000',
-                'stato' => 'StatoUser', 'dataNascita' => '1990-01-18', 'occupazione' => 'Studente',
-                'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'user', 'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s")],
+                'updated_at' => date("Y-m-d H:i:s"), 'email' => null, 'via' => null, 'citta' => null, 'cap' => null,
+                'stato' => null, 'occupazione' => null, 'dataNascita' => null],
+            
+            ['nome' => 'NomeUser', 'cognome' => 'CognomeUser', 'username' => 'useruser', 'password' => Hash::make('G3BREUJw'),
+                'tipologiaUtente' => 'user', 'created_at' => date("Y-m-d H:i:s"), 'updated_at' => date("Y-m-d H:i:s"),
+                'email' => 'EmailUser@email.com', 'via' => 'ViaUser', 'citta' => 'CittaUser',
+                'cap' => '10000', 'stato' => 'StatoUser', 'occupazione' => 'Studente', 'dataNascita' => '1998-01-15'],
+               
             ['nome' => 'NomeStaff', 'cognome' => 'CognomeStaff', 'username' => 'staffstaff',
                 'password' => Hash::make('G3BREUJw'), 'tipologiaUtente' => 'staff', 'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s")],
+                'updated_at' => date("Y-m-d H:i:s"), 'email' => null, 'via' => null, 'citta' => null, 'cap' => null,
+                'stato' => null, 'occupazione' => null, 'dataNascita' => null]
         ]);
         
         
