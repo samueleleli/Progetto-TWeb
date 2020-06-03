@@ -49,8 +49,8 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Contatti</h2>
                         <ul>
-                            <li>Numero di telefono: 0765</li>
-                            <li>Email PEC:</li>
+                            <li>Numero di telefono: 071 651536</li>
+                            <li>Email PEC: eelectronics@gmail.com</li>
 
                         </ul>                        
                     </div>
@@ -60,7 +60,7 @@
                     <div class="footer-about-us">
                         <h2><span>Privacy Policy</span></h2>
                         <p class="testo-footer">
-                            La tua privacy è importante per noi. È politica di Electronics S.p.a. rispettare la tua privacy in merito a qualsiasi informazione che possiamo raccogliere da te attraverso il nostro sito Web.
+                            La tua privacy è importante per noi. È politica di eElectronics S.p.a. rispettare la tua privacy in merito a qualsiasi informazione che possiamo raccogliere da te attraverso il nostro sito Web.
                             Chiediamo informazioni personali solo quando ne abbiamo veramente bisogno per fornirti un servizio. Le raccogliamo con mezzi leciti, con la tua conoscenza e il tuo consenso. Ti facciamo anche sapere perché lo stiamo raccogliendo e come verrà utilizzato.
                             Conserviamo le informazioni raccolte solo per il tempo necessario a fornire il servizio richiesto. I dati che archiviamo li proteggiamo con mezzi commercialmente accettabili per prevenire la perdita e il furto, nonché accesso, divulgazione, copia, utilizzo o modifica non autorizzati.
                             Non condividiamo informazioni di identificazione personale pubblicamente o con terze parti, tranne quando richiesto dalla legge.

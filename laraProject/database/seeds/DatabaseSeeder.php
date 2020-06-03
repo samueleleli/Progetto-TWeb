@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
                  1000 GB HDD
                  Tower Nero - Argento
                  PC Windows 10',
-                'prezzo' => 699.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Desktop Fascia Entry.jpg'],
+                'prezzo' => 699.99, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'Desktop Fascia Entry.jpg'],
             ['nome' => 'HP OMEN 880-199nl', 'idSottocategoria' => 1,
                 'descrBreve' => 'Desktop Fascia Medio-Alta', 'descrEstesa' => 'Intel® Core™ i7 di nona generazione i7-9700K
                  16 GB DDR4-SDRAM
@@ -107,7 +107,7 @@ class DatabaseSeeder extends Seeder
                  Grigio
                  Mini PC 
                  Mac OS Catalina',
-                'prezzo' => 1271.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Mac Mini.jpg'],
+                'prezzo' => 1271.00, 'percSconto' => 35, 'flagSconto' => 1, 'immagine' => 'Mac Mini.jpg'],
             
             
             ['nome' => 'ASUS VivoBook S15', 'idSottocategoria' => 2,
@@ -119,7 +119,7 @@ class DatabaseSeeder extends Seeder
                  128 GB SSD 
                  Wi-Fi 5 (802.11ac) 
                  Windows 10 S',
-                'prezzo' => 429.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Portatile Entry.jpg'],
+                'prezzo' => 429.00, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'Portatile Entry.jpg'],
             ['nome' => 'ASUS ZenBook 14', 'idSottocategoria' => 2,
                 'descrBreve' => 'Portatile di Fascia Media', 'descrEstesa' => 'Computer portatile
                  Argento
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
                  1024 GB SSD 
                  AMD Radeon Pro 5500M 
                  Wi-Fi 5 (802.11ac) macOS Catalina',
-                'prezzo' => 3299.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'MacBook Pro.jpg'],
+                'prezzo' => 3299.00, 'percSconto' => 15, 'flagSconto' => 1, 'immagine' => 'MacBook Pro.jpg'],
             ['nome' => 'ASUS ROG Strix G531GW-AZ061T', 'idSottocategoria' => 2,
                 'descrBreve' => 'Portatile da Gaming', 'descrEstesa' => 'Computer portatile
                  Nero 
@@ -174,7 +174,7 @@ class DatabaseSeeder extends Seeder
                 'prezzo' => 29.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Cuffie OverEar.jpg'],
             ['nome' => 'Logitech K780', 'idSottocategoria' => 3,
                 'descrBreve' => 'Tastiera Wireless', 'descrEstesa' => 'Tastiera RF Wireless + Bluetooth QWERTY Italiano Grigio, Bianco',
-                'prezzo' => 99.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Tastiera Wireless.jpg'],
+                'prezzo' => 99.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'Tastiera Wireless.jpg'],
             ['nome' => 'ASUS ROG Whetstone', 'idSottocategoria' => 3,
                 'descrBreve' => 'Tappetino Mouse Gaming', 'descrEstesa' => 'Tappetino per Mouse da Gaming Nero, Rosso',
                 'prezzo' => 39.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Tappetino Mouse.jpg'],
@@ -183,13 +183,13 @@ class DatabaseSeeder extends Seeder
                 'prezzo' => 39.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'WebCam.jpg'],
             ['nome' => 'NortonLifeLock Norton AntiVirus', 'idSottocategoria' => 3,
                 'descrBreve' => 'Antivirus Versione Base', 'descrEstesa' => 'NortonLifeLock Norton AntiVirus Basic Licenza base 1 licenza/e 1 anno/i',
-                'prezzo' => 29.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'AntiVirus.jpg'],
+                'prezzo' => 29.99, 'percSconto' => 25, 'flagSconto' => 1, 'immagine' => 'AntiVirus.jpg'],
             
             
             ['nome' => 'HP DeskJet 3762', 'idSottocategoria' => 4,
                 'descrBreve' => 'Stampante - Scanner', 'descrEstesa' => ' Stampante a Getto termico di inchiostro
                  4800 x 1200 DPI 8 ppm A4 Wi-Fi',
-                'prezzo' => 59.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Stampante Mia.jpg'],
+                'prezzo' => 59.99, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'Stampante Mia.jpg'],
             ['nome' => 'Epson EcoTank ET-M2140', 'idSottocategoria' => 4,
                 'descrBreve' => 'Stampante da Ufficio', 'descrEstesa' => 'Tecnologia di stampa Ad inchiostro 
                  Velocità di stampa (nero, qualità normale, A4/US Letter) 39  ppm
@@ -201,7 +201,7 @@ class DatabaseSeeder extends Seeder
                 'prezzo' => 32.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Inchiostro Stampante.jpg'],
             ['nome' => 'HP ENVY Photo 7134', 'idSottocategoria' => 4,
                 'descrBreve' => 'Stampante Fascia Media', 'descrEstesa' => 'Stampante  a Getto termico di inchiostro 4800 x 1200 DPI 14 ppm A4 Wi-Fi',
-                'prezzo' => 129.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'StampanteMedia.jpg'],
+                'prezzo' => 129.99, 'percSconto' => 60, 'flagSconto' => 1, 'immagine' => 'StampanteMedia.jpg'],
             ['nome' => 'Epson Singlepack Black 603 Ink', 'idSottocategoria' => 4,
                 'descrBreve' => 'Inchiostro Fotografico', 'descrEstesa' => 'Inchiostro per stamopanti Epson, adatto a stampa di fotografie',
                 'prezzo' => 13.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'InchiostroFoto.jpg'],
@@ -215,7 +215,7 @@ class DatabaseSeeder extends Seeder
                  Velocità di lettura 540  MB/s
                  Interfaccia Serial ATA III 
                  Interno Sì ',
-                'prezzo' => 169.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SSD Samsung 500.jpg'],
+                'prezzo' => 169.99, 'percSconto' => 15, 'flagSconto' => 1, 'immagine' => 'SSD Samsung 500.jpg'],
             ['nome' => 'Seagate Maxtor M3 2 TB', 'idSottocategoria' => 5,
                 'descrBreve' => 'HDD da 2 TB', 'descrEstesa' => 'Disco rigido esterno 2000 GB Nero
                  2,5" 5000 Mb/s',
@@ -225,7 +225,7 @@ class DatabaseSeeder extends Seeder
                 'prezzo' => 17.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'USB32GB.jpg'],
             ['nome' => 'Seagate Expansion Portable 4TB ', 'idSottocategoria' => 5,
                 'descrBreve' => 'HDD da 4 TB', 'descrEstesa' => 'Disco rigido esterno 4000 GB Nero USB 3.0 5200rpm',
-                'prezzo' => 159.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'HDD4TB.jpg'],
+                'prezzo' => 159.99, 'percSconto' => 45, 'flagSconto' => 1, 'immagine' => 'HDD4TB.jpg'],
             ['nome' => 'SSD Intenso 256 GB', 'idSottocategoria' => 5,
                 'descrBreve' => 'SSD interno da 256 GB', 'descrEstesa' => 'Capacità SSD 256  GB
                  Velocità di scrittura 500  MB/s
@@ -241,7 +241,7 @@ class DatabaseSeeder extends Seeder
                  Banda di frequenza 2.4, 5  GHz
                  Velocità massima di trasferimento dati 3000  MB/s
                  Algoritmi di sicurezza supportati WPA2,WPS ',
-                'prezzo' => 149.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'AVMRipetitore.jpg'],
+                'prezzo' => 149.99, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'AVMRipetitore.jpg'],
             ['nome' => 'TP-LINK Archer D50 Router', 'idSottocategoria' => 6,
                 'descrBreve' => 'Router Dual-Band Fascia Media', 'descrEstesa' => 'Quantità porte Ethernet LAN (RJ-45) 4 
                  Quantità porte RJ-11 1 
@@ -261,7 +261,7 @@ class DatabaseSeeder extends Seeder
                  Altezza 68  mm
                  Larghezza 58  mm
                  Profondità 31  mm',
-                'prezzo' => 49.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'RipetitoreEthernet.jpg'],
+                'prezzo' => 49.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'RipetitoreEthernet.jpg'],
             ['nome' => 'D-Link DGS-108 Switch di Rete', 'idSottocategoria' => 6,
                 'descrBreve' => 'Switch di Rete Ethernet', 'descrEstesa' => 'Quantità di porte RJ-45 8 
                  Tecnologia Ethernet su cavi in rame 1000BASE-T,100BASE-TX,10BASE-T   
@@ -346,7 +346,7 @@ class DatabaseSeeder extends Seeder
                  Capacità memoria interna 32  GB
                  4G
                  Colore Prodotto: Nero ',
-                'prezzo' => 279.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TabletGalaxy.jpg'],
+                'prezzo' => 279.99, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'TabletGalaxy.jpg'],
             ['nome' => 'Apple iPad Pro (11") 64 GB', 'idSottocategoria' => 8,
                 'descrBreve' => 'iPad Pro 11" 64 GB', 'descrEstesa' => 'Sistema operativo incluso iOS 12 
                  Dimensioni schermo 11  "
@@ -369,7 +369,7 @@ class DatabaseSeeder extends Seeder
                  Capacità memoria interna 32  GB
                  4G
                  Colore Prodotto: Argento ',
-                'prezzo' => 529.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'iPadStudenti.jpg'],
+                'prezzo' => 529.00, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'iPadStudenti.jpg'],
             ['nome' => 'Lenovo Tab M10 plus (10.3")', 'idSottocategoria' => 8,
                 'descrBreve' => 'Tablet di Fascia Media', 'descrEstesa' => 'Dimensioni schermo 10.3  "
                  RAM installata 4  GB
@@ -383,7 +383,7 @@ class DatabaseSeeder extends Seeder
                  Compatibilità Galaxy s10+ 
                  Colore del prodotto Verde 
                  Tipologia custodia Custodia a libro',
-                'prezzo' => 65.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'CustodiaNotifiche.jpg'],
+                'prezzo' => 65.99, 'percSconto' => 15, 'flagSconto' => 1, 'immagine' => 'CustodiaNotifiche.jpg'],
             ['nome' => 'Airpods Pro', 'idSottocategoria' => 9,
                 'descrBreve' => 'Auricolari Wireless', 'descrEstesa' => 'Tecnologia di connessione Senza fili 
                  Effetto di cancellazione del rumore Sì 
@@ -395,7 +395,7 @@ class DatabaseSeeder extends Seeder
             ['nome' => 'Cellularline PowerUp 5200', 'idSottocategoria' => 9,
                 'descrBreve' => 'Powerbank da 5200 mAh', 'descrEstesa' => 'Fonte di ricarica Batteria
                  Capacità della batteria 5200  mAh',
-                'prezzo' => 19.95, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'PowerUp5200.jpg'],
+                'prezzo' => 19.95, 'percSconto' => 25, 'flagSconto' => 1, 'immagine' => 'PowerUp5200.jpg'],
             ['nome' => 'Samsung Caricatore MicroUSB', 'idSottocategoria' => 9,
                 'descrBreve' => 'Caricatore USB A - MicroUSB', 'descrEstesa' => 'Tipo di caricatore Interno 
                  Compatibilità caricatore Universale 
@@ -414,7 +414,7 @@ class DatabaseSeeder extends Seeder
                  Risoluzione del display 1920 x 1080  pixel
                  Formato del segnale digitale DVB-C,DVB-S2,DVB-T2 
                  Sistema operativo incluso Tizen ',
-                'prezzo' => 299.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TVHDSamsung.jpg'],
+                'prezzo' => 299.00, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'TVHDSamsung.jpg'],
             ['nome' => 'Samsung Series 6 TV QLED 4K 49"', 'idSottocategoria' => 10,
                 'descrBreve' => 'TV 4K 49"', 'descrEstesa' => 'Dimensioni schermo 49  "
                  Tipologia HD 4K Ultra HD 
@@ -427,7 +427,7 @@ class DatabaseSeeder extends Seeder
                  Risoluzione del display 3840 x 2160  pixel
                  Tipo di retroilluminazione LED Direct-LED 
                  Sistema operativo incluso Android ',
-                'prezzo' => 1049.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SonyTV4K.jpg'],
+                'prezzo' => 1049.00, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'SonyTV4K.jpg'],
             ['nome' => 'Hitachi 24" HD', 'idSottocategoria' => 10,
                 'descrBreve' => 'TV Low-Cost HD 24"', 'descrEstesa' => 'Dimensioni schermo 24  "
                  Tipologia HD HD 
@@ -447,7 +447,7 @@ class DatabaseSeeder extends Seeder
                  Tipologia HD 8K Ultra HD 
                  Risoluzione del display 7680 x 4320  pixel
                  Formato del segnale digitale DVB-C,DVB-C2,DVB-S2,DVB-T,DVB-T2 ',
-                'prezzo' => 4999.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TVULTRAFIGA.jpg'],
+                'prezzo' => 4999.00, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'TVULTRAFIGA.jpg'],
             
             
             ['nome' => 'Digiquest Cam Tivùsat 4K', 'idSottocategoria' => 11,
@@ -459,7 +459,7 @@ class DatabaseSeeder extends Seeder
                  TV interattiva No 
                  Telecomando portatile Si 
                  Wi-Fi No ',
-                'prezzo' => 44.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'DecoderSchifus.jpg'],
+                'prezzo' => 44.90, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'DecoderSchifus.jpg'],
             ['nome' => 'Telesystem TS9015', 'idSottocategoria' => 11,
                 'descrBreve' => 'Decoder Fascia Alta', 'descrEstesa' => 'Digital Satellite Equipment Control (DiSEqC) 1.0, 1.2, Sat-CR, USALS 
                  Numero prese Scart 1 
@@ -475,7 +475,7 @@ class DatabaseSeeder extends Seeder
                  Quantità di canali 1000  channels
                  Telecomando portatile Si 
                  Wi-Fi No ',
-                'prezzo' => 39.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'DecoderScart.jpg'],
+                'prezzo' => 39.90, 'percSconto' => 25, 'flagSconto' => 1, 'immagine' => 'DecoderScart.jpg'],
             
             
             ['nome' => 'Bose SoundTouch 20 Series III', 'idSottocategoria' => 12,
@@ -483,7 +483,7 @@ class DatabaseSeeder extends Seeder
                  Supporto di memorizzazione integrato No 
                  Servizi di streaming di rete supportati Pandora 
                  Servizi radio Internet supportati Pandora, Spotify, ',
-                'prezzo' => 399.95, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'BoseSound.jpg'],
+                'prezzo' => 399.95, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'BoseSound.jpg'],
             ['nome' => 'LG XBOOM AI ThinQ 30W', 'idSottocategoria' => 12,
                 'descrBreve' => 'Cassa Smart', 'descrEstesa' => 'Assistente virtuale Google Assistant 
                  Touch screen No 
@@ -504,7 +504,7 @@ class DatabaseSeeder extends Seeder
             ['nome' => 'Bose Surround Speakers', 'idSottocategoria' => 12,
                 'descrBreve' => 'Altoparlanti Wireless', 'descrEstesa' => 'Utilizzo raccomandato Casa   
                  Posizionamento diffusori Pavimento, Montabile su supporto, Tavolo/Libreria, Montabile a parete ',
-                'prezzo' => 349.95, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'WirelessBose.jpg'],
+                'prezzo' => 349.95, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'WirelessBose.jpg'],
             ['nome' => 'Sonos One', 'idSottocategoria' => 12,
                 'descrBreve' => 'Cassa Smart Sonos', 'descrEstesa' => 'Utilizzo raccomandato Universale   
                  Posizionamento diffusori Tavolo/Libreria 
@@ -521,7 +521,7 @@ class DatabaseSeeder extends Seeder
                  Formati immagini supportati JPEG XR,MPO 
                  Quantità porte HDMI 1 
                  Quantità porte USB 2.0 1 ',
-                'prezzo' => 79.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'PanasonicBlu.jpg'],
+                'prezzo' => 79.99, 'percSconto' => 70, 'flagSconto' => 1, 'immagine' => 'PanasonicBlu.jpg'],
             ['nome' => 'TELE System TS5105 Lettore DVD ', 'idSottocategoria' => 13,
                 'descrBreve' => 'Lettore DVD Low-Cost', 'descrEstesa' => 'Tipo di dispositivo Lettore DVD 
                  Formati video supportati MPEG4 
@@ -537,7 +537,7 @@ class DatabaseSeeder extends Seeder
                  Formato 16:9 
                  Tipologia display doppio schermo LED 
                  Tipologia alimentazione AC, dC',
-                'prezzo' => 179.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TreviDVD.jpg'],
+                'prezzo' => 179.00, 'percSconto' => 50, 'flagSconto' => 1, 'immagine' => 'TreviDVD.jpg'],
             ['nome' => 'TELE System TS5011 PX Convertibile ', 'idSottocategoria' => 13,
                 'descrBreve' => 'Lettore DVD Portatile', 'descrEstesa' => 'Dimensioni schermo 9  "
                  Formato di riproduzione CD audio,CD video,DVD-Audio,DVD-Video,SVCD,VCD 
@@ -557,7 +557,7 @@ class DatabaseSeeder extends Seeder
                 'descrBreve' => 'Cuffia per TV', 'descrEstesa' => 'Interfaccia dispositivo RF 
                  Range wireless 100  m
                  Frequenza cuffia 10 - 22000  Hz',
-                'prezzo' => 89.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SonyCuffieTV.jpg'],
+                'prezzo' => 89.99, 'percSconto' => 60, 'flagSconto' => 1, 'immagine' => 'SonyCuffieTV.jpg'],
             ['nome' => 'Meliconi CME EDR400 50"', 'idSottocategoria' => 14,
                 'descrBreve' => 'Supporto TV a Muro', 'descrEstesa' => 'Capienza massima dimensioni dello schermo 50  "
                  Peso massimo (capacità) 25  kg
@@ -578,7 +578,7 @@ class DatabaseSeeder extends Seeder
                  Connettore 2 HDMI tipo A (Standard) 
                  Velocità di trasferimento dati 10.2  GB/s
                  Colore del prodotto Nero ',
-                'prezzo' => 17.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'CavoHDMI.jpg'],
+                'prezzo' => 17.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'CavoHDMI.jpg'],
             
             
             ['nome' => 'Sony Alpha 6000L', 'idSottocategoria' => 15,
@@ -589,7 +589,7 @@ class DatabaseSeeder extends Seeder
                  Stabilizzatore immagine Sì 
                  Tipi schede di memoria MS PRO Duo,MS Pro-HG Duo,MS XC-HG Duo,SD,SDHC,SDXC 
 T                ipo batteria NP-FW50 ',
-                'prezzo' => 899.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SonyAlpha6000.jpg'],
+                'prezzo' => 899.99, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'SonyAlpha6000.jpg'],
             ['nome' => 'Fujifilm Instax SQ 6', 'idSottocategoria' => 15,
                 'descrBreve' => 'Fotocamera Instantanea', 'descrEstesa' => 'Regolazione messa a fuoco Auto/Manuale 
                  Tipo di otturatore Elettronico 
@@ -604,7 +604,7 @@ T                ipo batteria NP-FW50 ',
                  Stabilizzatore immagine No 
                  Tipi schede di memoria MS PRO Duo,MS Pro-HG Duo,MS XC-HG Duo,SD,SDHC,SDXC 
                  Tipo batteria NP-FW50 ',
-                'prezzo' => 1799.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SonyAlpha7.jpg'],
+                'prezzo' => 1799.00, 'percSconto' => 25, 'flagSconto' => 1, 'immagine' => 'SonyAlpha7.jpg'],
             ['nome' => 'Canon EOS 4000D', 'idSottocategoria' => 15,
                 'descrBreve' => 'Reflex Entry-Level', 'descrEstesa' => 'Tipologia fotocamera Kit fotocamere SLR 
                  Megapixel 18  MP
@@ -619,7 +619,7 @@ T                ipo batteria NP-FW50 ',
                  Dimensioni schermo 3.2  "
                  Tipi schede di memoria SD, SDHC, SDXC 
                  Tipo batteria EN-EL14a ',
-                'prezzo' => 739.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'ReflexNikonMedia.jpg'],
+                'prezzo' => 739.99, 'percSconto' => 65, 'flagSconto' => 1, 'immagine' => 'ReflexNikonMedia.jpg'],
             ['nome' => 'Panasonic Lumix DMC-FZ300 ', 'idSottocategoria' => 15,
                 'descrBreve' => 'Fotocamera Bridge Panasonic', 'descrEstesa' => 'Tipologia fotocamera Fotocamera Bridge 
                  Megapixel 12.1  MP
@@ -644,7 +644,7 @@ T                ipo batteria NP-FW50 ',
                  Tipi schede di memoria MicroSD (TransFlash) 
                  Tipologia alimentazione Batteria 
                  Colore del prodotto Nero ',
-                'prezzo' => 59.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Dashcam.jpg'],
+                'prezzo' => 59.90, 'percSconto' => 70, 'flagSconto' => 1, 'immagine' => 'Dashcam.jpg'],
             ['nome' => 'Sony HDR-CX240E Handycam', 'idSottocategoria' => 16,
                 'descrBreve' => 'Videocamere Fascia Alta', 'descrEstesa' => 'Zoom ottico 27  X
                  Tipo sensore CMOS 
@@ -665,7 +665,7 @@ T                ipo batteria NP-FW50 ',
                 'descrBreve' => 'Action Cam di Fascia Alta', 'descrEstesa' => 'Megapixel totali 16.6  MP
                  Funzioni di protezione Impermeabile 
                  Tipi schede di memoria MicroSD (TransFlash)',
-                'prezzo' => 529.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'GoProMax.jpg'],
+                'prezzo' => 529.99, 'percSconto' => 5, 'flagSconto' => 1, 'immagine' => 'GoProMax.jpg'],
             
             
             ['nome' => 'Obiettivo Sony 35mm', 'idSottocategoria' => 17,
@@ -675,7 +675,7 @@ T                ipo batteria NP-FW50 ',
                  Focus manuale Sì 
                  Marche compatibili Sony 
                  Peso 154  g',
-                'prezzo' => 470.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Sony35mm.jpg'],
+                'prezzo' => 470.00, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'Sony35mm.jpg'],
             ['nome' => 'Canon EF 24-105mm f/3.5-5.6', 'idSottocategoria' => 17,
                 'descrBreve' => 'Obiettivo Zoom per Canon', 'descrEstesa' => 'Lunghezza focale 24 - 105  mm
                  Struttura lente 17/13 
@@ -700,14 +700,14 @@ T                ipo batteria NP-FW50 ',
                  Focus manuale Sì 
                  Marche compatibili Nikon 
                  Peso 680  g',
-                'prezzo' => 680.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Nikkor300mm.jpg'],
+                'prezzo' => 680.00, 'percSconto' => 80, 'flagSconto' => 1, 'immagine' => 'Nikkor300mm.jpg'],
             
             
             ['nome' => 'SP-Gadgets 52032', 'idSottocategoria' => 18,
                 'descrBreve' => 'Custodia Accessori GoPro', 'descrEstesa' => 'Tipo Compatta 
                  Prodotti compatibili Hero 1, 2, 3, Hero3+ 
                  Colore del prodotto Giallo ',
-                'prezzo' => 24.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'AccessoriGoPro.jpg'],
+                'prezzo' => 24.99, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'AccessoriGoPro.jpg'],
             ['nome' => 'Sandisk Extreme Memoria Flash 64 GB', 'idSottocategoria' => 18,
                 'descrBreve' => 'Memoria SD Flash 64 GB', 'descrEstesa' => 'Capacità 64  GB
                  Tipo flash card SDXC 
@@ -731,7 +731,7 @@ T                ipo batteria NP-FW50 ',
                 'descrBreve' => 'Batteria Ricaricabile Nikon', 'descrEstesa' => 'Voltaggio della batteria 7  V
                  Capacità della batteria 1900  mAh
                  Tecnologia batteria Ioni di Litio ',
-                'prezzo' => 59.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'BatteriaNikon.jpg'],
+                'prezzo' => 59.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'BatteriaNikon.jpg'],
             
             
             ['nome' => 'Microsoft Controller Xbox One - PC', 'idSottocategoria' => 19,
@@ -746,7 +746,7 @@ T                ipo batteria NP-FW50 ',
                  Data di rilascio 25 ottobre 2019 
                  Versione lingua Inglese, ITA 
                  Edizione gioco Basic ',
-                'prezzo' => 69.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'CODXbox.jpg'],
+                'prezzo' => 69.99, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'CODXbox.jpg'],
             ['nome' => 'Xbox One X Bundle', 'idSottocategoria' => 19,
                 'descrBreve' => 'Console + Gioco Incluso', 'descrEstesa' => 'Piattaforma Xbox One X 
                  Capacità memoria interna 1000  GB
@@ -766,7 +766,7 @@ T                ipo batteria NP-FW50 ',
                     Genere Guida 
                     Data di rilascio 3 ottobre 2014 
                     Versione lingua Italiano',
-                'prezzo' => 64.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'ForzaHorizon2.jpg'],
+                'prezzo' => 64.90, 'percSconto' => 60, 'flagSconto' => 1, 'immagine' => 'ForzaHorizon2.jpg'],
             ['nome' => 'X-Joy Kripton', 'idSottocategoria' => 19,
                 'descrBreve' => 'Cuffie da Gaming', 'descrEstesa' => 'Lunghezza cavo 1.2  m
                     Stile di uso Padiglione auricolare 
@@ -780,7 +780,7 @@ T                ipo batteria NP-FW50 ',
                  Interfaccia dispositivo Bluetooth 
                  Tecnologia di connessione Con cavo e senza cavo 
                  Colore del prodotto Nero ',
-                'prezzo' => 69.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'ControllerPS4.jpg'],
+                'prezzo' => 69.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'ControllerPS4.jpg'],
             ['nome' => 'FIFA 20', 'idSottocategoria' => 20,
                 'descrBreve' => 'Videogioco Sportivo', 'descrEstesa' => 'Classificazione PEGI 3 
                     Genere Sport 
@@ -805,7 +805,7 @@ T                ipo batteria NP-FW50 ',
                     Data di rilascio 7 settembre 2018 
                     Versione lingua Audio Italiano, testi italiano 
                     Edizione gioco Standard ',
-                'prezzo' => 39.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SpiderMan.jpg'],
+                'prezzo' => 39.99, 'percSconto' => 60, 'flagSconto' => 1, 'immagine' => 'SpiderMan.jpg'],
             ['nome' => 'Sony Gold Wireless Headset', 'idSottocategoria' => 20,
                 'descrBreve' => 'Cuffie per PS4', 'descrEstesa' => 'Stile di uso Padiglione auricolare
                  Colore del prodotto Rose Gold',
@@ -833,7 +833,7 @@ T                ipo batteria NP-FW50 ',
                     Wi-Fi Sì 
                     Bluetooth Sì 
                     Colore del prodotto Corallo ',
-                'prezzo' => 219.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SwitchLite.jpg'],
+                'prezzo' => 219.99, 'percSconto' => 3, 'flagSconto' => 1, 'immagine' => 'SwitchLite.jpg'],
             ['nome' => 'Memoria Nintendo Sandisk 64 GB', 'idSottocategoria' => 21,
                 'descrBreve' => 'Memoria 64 GB', 'descrEstesa' => 'Capacità 64  GB'
                 . 'Tipo flash card MicroSDXC ',
@@ -842,7 +842,7 @@ T                ipo batteria NP-FW50 ',
                 'descrBreve' => 'Custodia per Switch', 'descrEstesa' => 'Compatibilità marca Nintendo   
                     Compatibilità Switch   
                     Colore del prodotto Grigio   ',
-                'prezzo' => 19.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'CustodiaSwitch.jpg'],
+                'prezzo' => 19.99, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'CustodiaSwitch.jpg'],
             
             
             ['nome' => 'Star Wars Jedi: Fallen Order - PC', 'idSottocategoria' => 22,
@@ -851,7 +851,7 @@ T                ipo batteria NP-FW50 ',
                     Data di rilascio 15 novembre 2019 
                     Versione lingua Italiano 
                     Edizione gioco CIAB ',
-                'prezzo' => 59.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'StarWarsPC.jpg'],
+                'prezzo' => 59.99, 'percSconto' => 10, 'flagSconto' => 1, 'immagine' => 'StarWarsPC.jpg'],
             ['nome' => 'Need for Speed Heat - PC', 'idSottocategoria' => 22,
                 'descrBreve' => 'Gioco Automobilistico', 'descrEstesa' => 'Classificazione PEGI 16 
                     Genere Guida 
@@ -865,7 +865,7 @@ T                ipo batteria NP-FW50 ',
                     Data di rilascio 15 maggio 2020 
                     Versione lingua Italiano 
                     Edizione gioco Basic ',
-                'prezzo' => 64.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'AvengersPC.jpg'],
+                'prezzo' => 64.99, 'percSconto' => 25, 'flagSconto' => 1, 'immagine' => 'AvengersPC.jpg'],
             ['nome' => 'Apex Legends Lifeline Edition - PC', 'idSottocategoria' => 22,
                 'descrBreve' => 'Gioco Sparatutto', 'descrEstesa' => 'Classificazione PEGI 16 
                     Genere Sparatutto online 
@@ -878,7 +878,7 @@ T                ipo batteria NP-FW50 ',
                     Genere Azione, avventura 
                     Data di rilascio Giugno 2015 
                     Versione lingua Italiano ',
-                'prezzo' => 29.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'LegoJWPC.jpg'],    
+                'prezzo' => 29.99, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'LegoJWPC.jpg'],    
             
             
             ['nome' => 'Trust Irus Telecamera di sicurezza', 'idSottocategoria' => 23,
@@ -888,7 +888,7 @@ T                ipo batteria NP-FW50 ',
                     Risoluzione massima 1280 x 720  pixel
                     Wi-Fi Sì 
                     Collegamento ethernet LAN No ',
-                'prezzo' => 79.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SicurezzaVideocamera.jpg'],
+                'prezzo' => 79.99, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'SicurezzaVideocamera.jpg'],
             ['nome' => 'Guardian Technologies Sismalarm ', 'idSottocategoria' => 23,
                 'descrBreve' => 'Sistema di Allarme', 'descrEstesa' => 'Decibel allarme 105  dB
                     Intervallo temperatura di funzionamento -10 - 60  °C
@@ -910,7 +910,7 @@ T                ipo batteria NP-FW50 ',
                     Visione notturna Sì 
                     Wi-Fi Sì 
                     Collegamento ethernet LAN No ',
-                'prezzo' => 44.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SmartCam2.jpg'],
+                'prezzo' => 44.99, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'SmartCam2.jpg'],
             ['nome' => 'Arlo Ultra', 'idSottocategoria' => 23,
                 'descrBreve' => 'Sistema di Sicurezza', 'descrEstesa' => 'Tipo di montaggio Parete 
                     Posizionamento supportato Interno e esterno 
@@ -929,7 +929,7 @@ T                ipo batteria NP-FW50 ',
             ['nome' => 'Philips Hue White and Color Ambiance Luce Portatile Go', 'idSottocategoria' => 24,
                 'descrBreve' => 'Luce Portatile Smart', 'descrEstesa' => 'Numero di lampadine 1  bulb(s)'
                 . 'Colore del prodotto Bianco',
-                'prezzo' => 79.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'PhilipsLuceSmart.jpg'],
+                'prezzo' => 79.90, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'PhilipsLuceSmart.jpg'],
             ['nome' => 'Xiaomi Mi Bedside Lamp 2', 'idSottocategoria' => 24,
                 'descrBreve' => 'Luce Comodino Smart', 'descrEstesa' => 'Xiaomi Mi Bedside Lamp 2 lampada da tavolo Bianco 9 W LED',
                 'prezzo' => 49.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'XiomiLuceSmart.jpg'],
@@ -943,7 +943,7 @@ T                ipo batteria NP-FW50 ',
             ['nome' => 'Philips Hue White and Color Ambiance Lampada a Barre', 'idSottocategoria' => 24,
                 'descrBreve' => 'Lampada a Barre Smart', 'descrEstesa' => 'Numero di lampadine 1  bulb(s)'
                 . 'Colore del prodotto Nero',
-                'prezzo' => 129.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'PhilipsBarreSmart.jpg'],
+                'prezzo' => 129.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'PhilipsBarreSmart.jpg'],
             
             
             ['nome' => 'Nest Termostato Learning Thermostat', 'idSottocategoria' => 25,
@@ -952,7 +952,7 @@ T                ipo batteria NP-FW50 ',
                     Sensore luce ambientale Si 
                     Sensore di umidità Si 
                     Sensore di temperatura Si ',
-                'prezzo' => 249.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'NestTermostato.jpg'],
+                'prezzo' => 249.00, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'NestTermostato.jpg'],
             ['nome' => 'Netatmo NTH01-IT-EC', 'idSottocategoria' => 25,
                 'descrBreve' => 'Termostato Smart', 'descrEstesa' => 'Il tuo Termostato Intelligente Netatmo si comanda a distanza da smartphone,
                  tablet o computer. Sei sulla strada del ritorno? Riavvia il riscaldamento prima del tuo arrivo.',
@@ -962,7 +962,7 @@ T                ipo batteria NP-FW50 ',
                 'prezzo' => 80.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TermostatoValvolaSmart.jpg'],
             ['nome' => 'Hualans Termostato WiFi', 'idSottocategoria' => 25,
                 'descrBreve' => 'Termostato Smart', 'descrEstesa' => 'Termostato intelligente Schermo LCD Touch Button Retroilluminato Programmabile con Alexa Google Home e Telefono APP-Bianco',
-                'prezzo' => 43.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TermoSmartAmazon.jpg'],
+                'prezzo' => 43.99, 'percSconto' => 30, 'flagSconto' => 1, 'immagine' => 'TermoSmartAmazon.jpg'],
             
             
             ['nome' => 'Google Nest Mini 2', 'idSottocategoria' => 26,
@@ -983,7 +983,7 @@ T                ipo batteria NP-FW50 ',
                     Streaming video Si 
                     Microfono incorporato Si 
                     Modalità viva-voce Si ',
-                'prezzo' => 99.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'GoogleHome.jpg'],
+                'prezzo' => 99.90, 'percSconto' => 800, 'flagSconto' => 1, 'immagine' => 'GoogleHome.jpg'],
             ['nome' => 'Bose Home Speaker 300', 'idSottocategoria' => 26,
                 'descrBreve' => 'Cassa Smart', 'descrEstesa' => 'Assistente virtuale Amazon Alexa 
                     Touch screen No 
@@ -1004,7 +1004,7 @@ T                ipo batteria NP-FW50 ',
             ['nome' => 'Panasonic Microsistema Audio per la Casa', 'idSottocategoria' => 26,
                 'descrBreve' => 'Sistema Audio Smart', 'descrEstesa' => 'Potenza in uscita (RMS) 20  W
                  Colore del prodotto Nero',
-                'prezzo' => 129.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'SistemaAudioSmart.jpg'],
+                'prezzo' => 129.99, 'percSconto' => 60, 'flagSconto' => 1, 'immagine' => 'SistemaAudioSmart.jpg'],
 
             
         ]);
