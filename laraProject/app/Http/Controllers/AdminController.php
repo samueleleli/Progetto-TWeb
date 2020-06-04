@@ -39,7 +39,7 @@ class AdminController extends Controller {
         $user->tipologiaUtente = 'staff';
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->action('AdminController@index');
+        return response()->json(['redirect' => route('admin')]);
         
     }
     
@@ -95,7 +95,7 @@ class AdminController extends Controller {
         User::where('username', $request->username)->update(array(
                          'nome'=>$request->nome, 'cognome'=>$request->cognome, 'password' => Hash::make($request->password) ));
         
-        return redirect()->action('AdminController@index');
+        return response()->json(['redirect' => route('admin')]);
     }
     
     /*public function storeStaff(NewStaffRequest $request) {

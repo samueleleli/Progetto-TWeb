@@ -91,7 +91,7 @@ class StaffController extends Controller {
             $destinationPath = public_path() . '/images/products';
             $image->move($destinationPath, $imageName);
          }
-        return redirect()->action('StaffController@index');
+        return response()->json(['redirect' => route('staff')]);
     }
     
     public function removeProduct($idProd){

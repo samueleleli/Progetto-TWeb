@@ -28,6 +28,6 @@ class UserController extends Controller {
                         'via'=>$request->via, 'citta'=>$request->citta, 'cap'=>$request->cap, 'stato'=>$request->stato, 'dataNascita'=>$request->dataNascita,
                         'occupazione'=>$request->occupazione ));
         
-        return redirect()->action('UserController@index');
+        return response()->json(['redirect' => route('user')]);
     }
 }

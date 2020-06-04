@@ -2,7 +2,27 @@
 
 @section('title', 'Inserimento Staff')
 
+@section('scripts')
+
+<script src="{{ asset('js/functions.js') }}" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function () {
+        var actionUrl = "{{ route('newStaff.store') }}";
+        var formId = 'addstaff';
+        $(":input").on('blur', function (event) {
+            var formElementId = $(this).attr('id');
+            doElemValidation(formElementId, actionUrl, formId);
+        });
+        $("#addstaff").on('submit', function (event) {
+            event.preventDefault();
+            doFormValidation(actionUrl, formId);
+        });
+});
+</script>
+
 @section('content')
+
 <div class="product-big-title-area">
     <div class="container">
         <div class="row">
@@ -20,7 +40,7 @@
     <div class="center">
         <div class="row">
             
-            {{ Form::open(array('route' => 'newStaff.store')) }}
+            {{ Form::open(array('route' => 'newStaff.store', 'id' => 'addstaff')) }}
        
             <div class="center">
                 <div id="customer_details" class="form-width">
@@ -29,50 +49,22 @@
                         <p>
                             {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
                             {{ Form::text('nome', '', ['class' => 'input', 'id' => 'nome']) }}
-                            @if ($errors->first('nome'))                            
-                            <ul class="errors">
-                                @foreach ($errors->get('nome') as $message)
-                                <li>{{ $message }}</li>
-                                @endforeach
-                            </ul>
-                            @endif
                         </p>
                             
                 
                         <p>
                             {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
-                            {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}
-                            @if ($errors->first('cognome'))                            
-                            <ul class="errors">
-                                @foreach ($errors->get('cognome') as $message)
-                                <li>{{ $message }}</li>
-                                @endforeach
-                            </ul>
-                            @endif
+                            {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}   
                         </p>
                 
                         <p>
                             {{ Form::label('username', 'Username', ['class' => 'label-input']) }}
                             {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
-                            @if ($errors->first('username'))
-                            <ul class="errors">
-                                @foreach ($errors->get('username') as $message)
-                                <li>{{ $message }}</li>
-                                @endforeach
-                            </ul>
-                            @endif
                         </p>
                             
                         <p>
                             {{ Form::label('password', 'Password', ['class' => 'label-input']) }}
                             {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-                            @if ($errors->first('password'))
-                            <ul class="errors">
-                                @foreach ($errors->get('password') as $message)
-                                <li>{{ $message }}</li>
-                                @endforeach
-                            </ul>
-                            @endif
                         </p>
                         
                         <p>
@@ -81,9 +73,10 @@
                         
                     </div>
                 </div>
-                {{ Form::close() }}
+                
+            {{ Form::close() }}
+                
             </div>
-        
         </div>    
     </div>                    
 </div>
