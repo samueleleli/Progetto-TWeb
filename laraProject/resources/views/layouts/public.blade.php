@@ -52,11 +52,10 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Contatti</h2>
                         <ul>
-                            <li>Telefono fisso: 071 651536</li>
-                            <li>Telefono cellulare: 333 2251907</li>
-                            <li>PEC: eelectronics@pec.com</li>
-                            <li>Email: eelectronics@gmail.com</li>
-
+                            <li><b>Telefono fisso</b> <br> 071 651536</li>
+                            <li><b>Telefono cellulare</b> <br> 333 2251907</li>
+                            <li><b>PEC</b> <br><a href="mailto:eelectronics@pec.com">eelectronics@pec.com</a></li>
+                            <li><b>Email</b> <br> <a href="mailto:eelectronics@gmail.com">eelectronics@gmail.com</a></li>
                         </ul>                        
                     </div>
                 </div>
