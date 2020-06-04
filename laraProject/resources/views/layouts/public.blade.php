@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        @show
+        @section('scripts')
+        @show
         <title>eElectronics | @yield('title', 'Catalogo eElectronics')</title>
     </head>
     
@@ -49,8 +52,10 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Contatti</h2>
                         <ul>
-                            <li>Numero di telefono: 071 651536</li>
-                            <li>Email PEC: eelectronics@gmail.com</li>
+                            <li>Telefono fisso: 071 651536</li>
+                            <li>Telefono cellulare: 333 2251907</li>
+                            <li>PEC: eelectronics@pec.com</li>
+                            <li>Email: eelectronics@gmail.com</li>
 
                         </ul>                        
                     </div>

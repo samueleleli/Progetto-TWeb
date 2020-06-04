@@ -124,7 +124,7 @@ a:hover, a:focus {color: #17a78b}
     margin-top: 25px;
     font-size: 50px;
     font-weight: 100;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -350,7 +350,9 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 }
 
 .testo-footer{
-     font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 75%
+     font-family: Verdana, Arial, Helvetica, sans-serif; 
+     font-size: 75%;
+     text-align: justify; 
 }
 
 .area-main-content {
@@ -469,6 +471,88 @@ table.shop_table td.product-name a:hover {color: #1ABC9C;text-decoration: none}
     background: none repeat scroll 0 0 #FF0000;
     font-weight: bold;
 }
+
+.title-home {
+    font-family: "Raleway",sans-serif;
+    margin-top: 25px;
+    font-size: 53px;
+    font-weight: 900;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.text-intro {
+    padding-top: 20px;
+    font-family: "Raleway",sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+
+.home-section {
+    font-family: "Raleway",sans-serif;
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+.text-home {
+    padding-top: 0px;
+    font-family: "Raleway",sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+
+.background-section-home {
+    background: none repeat scroll 0 0 #f4f4f4;
+    margin-bottom: 20px;
+    padding: 10px 30px 10px;
+    margin-top: 100px;
+    color: #555;
+}
+
+.title-relazione {
+    font-family: "Raleway",sans-serif;
+    margin-top: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color:#CC0000;
+}
+
+
+.text-relazione {
+    padding-top: 0px;
+    font-family: "Raleway",sans-serif;
+    font-size: 17px;
+    text-align: center;
+    font-weight:bold;
+    margin-bottom: 40px;
+    color:#CC0000;
+}
+
+
+.background-relazione {
+    background: none repeat scroll 0 0 #f4f4f4;
+    margin-bottom: 20px;
+    padding: 10px 30px 10px;
+    margin-top: 100px;
+}
+
+.caption {
+    cursor: pointer;
+}
+
 
 
 
