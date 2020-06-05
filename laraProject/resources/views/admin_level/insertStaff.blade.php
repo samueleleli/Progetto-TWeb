@@ -42,7 +42,7 @@ $(function () {
             
             {{ Form::open(array('route' => 'newStaff.store', 'id' => 'addstaff')) }}
        
-            <div class="center">
+            <div>
                 <div id="customer_details" class="form-width">
                     <div class="col-5 form-login-signup">
                         <h3>INSERISCI UTENTE STAFF</h3>

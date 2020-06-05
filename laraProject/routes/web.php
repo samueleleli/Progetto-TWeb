@@ -118,3 +118,9 @@ Route::get('/modStaff/{username}', 'AdminController@showDataStaff')
 
 Route::post('/modStaff', 'AdminController@editStaff')
         ->name('modStaff.edit');
+
+Route::get('/addCategory', 'StaffController@addCategory')
+        ->name('addCategory');
+
+Route::post('/addCategory', 'StaffController@storeCategory')
+        ->name('addCategory.store');

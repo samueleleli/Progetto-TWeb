@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Staff;
 use App\Models\Resources\Product;
 use App\Http\Requests\NewProductRequest;
+use App\Models\Resources\Category;
+use App\Models\Resources\SubCategory;
+use App\Http\Requests\NewCategoryRequest;
 
 class StaffController extends Controller {
 
@@ -104,6 +107,27 @@ class StaffController extends Controller {
         Product::find($idProd)->delete();
         
         return redirect()->action('StaffController@index');
+    }
+    
+    public function addCategory(){
+        $prodCats = $this->_staffModel->getCats()->pluck('Categoria', 'idCategoria');
+        return view('product.addCategory')->with('cats', $prodCats);
+    }
+    
+    public function storeCategory(NewCategoryRequest $request){
+        if($request->radioButton == 'categoria'){
+            $category = new Category;
+            $category->categoria = $request->categoria;
+            $category->save();
+            return response()->json(['redirect' => route('staff')]);
+            
+        } else if($request->radioButton == 'sottocategoria'){
+            $subcategory = new SubCategory;
+            $subcategory->sottocategoria = $request->categoria;
+            $subcategory->idCategoria = $request->categorie;
+            $subcategory->save();
+            return response()->json(['redirect' => route('staff')]);
+        }
     }
 
 }
