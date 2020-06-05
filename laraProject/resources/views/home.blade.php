@@ -11,9 +11,19 @@
             $(this).closest('div.latest-product').find('div.text-home p').slideToggle();
         });
     });
+    
+    function fotografie(x, n) {
+        var foto = new Array(n);
+        /* scrivere il path ed il nome delle foto che volere usare */
+        foto[0] = '{{ asset("images/img_home1.png") }}';
+        foto[1] = '{{ asset("images/img_home2.png") }}';
+        foto[2] = '{{ asset("images/img_home3.png") }}';
+        return foto[x];
+    }
 
     $(document).ready(function () {
         $('div.text-home p').hide();
+        slideshow(3, 1000, 4000);
     });
 </script>
 
@@ -35,8 +45,9 @@
 
 <div class="maincontent-area">
     <div class="container">
-        <div class="row d-flex justify-content-center">
-            <img src="{{ asset('images/img_home.png') }}" alt="Home Image" >
+        <div class="row d-flex justify-content-center" id="slide">
+            <img id="foto1" src="">
+            <img id="foto2" src="">
         </div>
     </div>
     <div class="container">

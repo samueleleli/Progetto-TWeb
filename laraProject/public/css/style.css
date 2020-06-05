@@ -477,7 +477,7 @@ table.shop_table td.product-name a:hover {color: #1ABC9C;text-decoration: none}
 
 .title-home {
     font-family: "Raleway",sans-serif;
-    margin-top: 25px;
+    margin-top: 100px;
     font-size: 53px;
     font-weight: 900;
     margin-bottom: 0px;
@@ -560,6 +560,30 @@ table.shop_table td.product-name a:hover {color: #1ABC9C;text-decoration: none}
     margin-top: 10px;
     margin-bottom: 10px;
     
+}
+
+.slide-position {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slide{
+    overflow: hidden;
+    width: 1280px;
+    height: 500px;
+    position: relative;
+    align-content: center;
+    top: 50px;
+    left: 20px;
+    box-shadow: 0px 0px 5px black;
+}
+
+#slide img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 
