@@ -4,8 +4,8 @@
 
 @section('scripts')
 @parent
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script src="{{ asset('js/functions.js') }}" ></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script type="text/javascript">
 $(function () {
     $('div.caption h2').on('click', function () {
@@ -54,6 +54,7 @@ $(document).ready(function () {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                
                 <div class="latest-product">
                     <h2 class="title-home">Benvenuti su eElectronics,<br> la nuova frontiera dello shopping online!</h2>
                     <div class="text-intro">
@@ -67,8 +68,6 @@ $(document).ready(function () {
                         abbiamo incluso la possibilità di visualizzare se i prodotti sono in sconto!<br>
                     </div>
                 </div>
-
-
 
                 <div class="latest-product background-section-home">
                     <div class="caption">
