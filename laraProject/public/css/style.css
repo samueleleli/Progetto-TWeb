@@ -572,10 +572,9 @@ table.shop_table td.product-name a:hover {color: #1ABC9C;text-decoration: none}
     width: 1280px;
     height: 500px;
     position: relative;
-    align-content: center;
     top: 50px;
-    left: 20px;
-    box-shadow: 0px 0px 5px black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #slide img{

@@ -4,28 +4,28 @@
 
 @section('scripts')
 @parent
-<script src="{{ asset('js/functions.js') }}" ></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="{{ asset('js/functions.js') }}" ></script>
 <script type="text/javascript">
-    $(function () {
-        $('div.caption h2').on('click', function () {
-            $(this).closest('div.latest-product').find('div.text-home p').slideToggle();
-        });
+$(function () {
+    $('div.caption h2').on('click', function () {
+        $(this).closest('div.latest-product').find('div.text-home p').slideToggle();
     });
-    
-    function fotografie(x, n) {
-        var foto = new Array(n);
-        /* scrivere il path ed il nome delle foto che volere usare */
-        foto[0] = '{{ asset("images/img_home1.png") }}';
-        foto[1] = '{{ asset("images/img_home2.png") }}';
-        foto[2] = '{{ asset("images/img_home3.png") }}';
-        return foto[x];
-    }
+});
 
-    $(document).ready(function () {
-        $('div.text-home p').hide();
-        slideshow(3, 1000, 4000);
-    });
+function fotografie(x, n) {
+    var foto = new Array(n);
+    /* scrivere il path ed il nome delle foto che volere usare */
+    foto[0] = '{{ asset("images/img_home1.png") }}';
+    foto[1] = '{{ asset("images/img_home2.png") }}';
+    foto[2] = '{{ asset("images/img_home3.png") }}';
+    return foto[x];
+}
+
+$(document).ready(function () {
+    $('div.text-home p').hide();
+    slideshow(3, 1000, 4000);
+});
 </script>
 
 @endsection
@@ -45,12 +45,12 @@
 </div>
 
 <div class="maincontent-area">
-    <div class="container">
-        <div class="row d-flex justify-content-center" id="slide">
-            <img id="foto1" src="">
-            <img id="foto2" src="">
-        </div>
+
+    <div class="d-flex justify-content-center" id="slide">
+        <img id="foto1" src="">
+        <img id="foto2" src="">
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -88,7 +88,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="latest-product background-section-home">
                     <div class="caption">
                         <h2 class="home-section">Modalità d'iscrizione</h2>
