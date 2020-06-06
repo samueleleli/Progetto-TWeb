@@ -30,8 +30,10 @@ $(document).ready(function () {
                     <div class="product-bit-title text-center">
                          @if($flagpub)
                             <h2>Catalogo Prodotti</h2>
-                         @else   
+                         @else
+                           @can('isStaff')
                             <h2>Modifica Prodotti</h2>
+                           @endcan
                          @endif
                     </div>
                 </div>
@@ -68,9 +70,11 @@ $(document).ready(function () {
                                             <li><a href="{{ route('catalog2', [$category->idCategoria])}}">{{ $category->categoria }}</a>
                                         @endforeach
                                 @else
+                                   @can('isStaff')
                                         @foreach ($categories as $category)
                                             <li><a href="{{ route('catalog2Staff', [$category->idCategoria])}}">{{ $category->categoria }}</a>
                                         @endforeach
+                                   @endcan     
                                 @endif
                             </ul>
                     </div>
@@ -83,9 +87,11 @@ $(document).ready(function () {
                                             <li><a href="{{ route('catalog3', [$selectedCat->idCategoria, $subCategory->idSottocategoria])}}">{{ $subCategory->sottocategoria }}</a>
                                         @endforeach
                                     @else
+                                      @can('isStaff')
                                         @foreach ($subCategories as $subCategory)
                                             <li><a href="{{ route('catalog3Staff', [$selectedCat->idCategoria, $subCategory->idSottocategoria])}}">{{ $subCategory->sottocategoria }}</a>
                                         @endforeach
+                                      @endcan
                                     @endif    
                                 </ul>
                         </div>
