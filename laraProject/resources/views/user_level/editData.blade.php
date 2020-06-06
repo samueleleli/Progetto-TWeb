@@ -19,7 +19,21 @@ $(function () {
             doFormValidation(actionUrl, formId);
         });
 });
+
+$(document).ready(function () {
+    $("#edit").on('click', function() {
+        var domanda = confirm("Sei sicuro di voler confermare le modifiche?");
+        if (domanda === true) {
+            return true;  
+        }else{
+            alert('Operazione annullata');
+            return false;
+        }
+    });
+});
 </script>
+
+@endsection
 
 @section('content')
 
@@ -109,7 +123,7 @@ $(function () {
                         </p>
                             
                         <p>
-                            {{ Form::submit('Modifica', ['class' => 'button']) }}
+                            {{ Form::submit('Modifica', ['id' => 'edit', 'class' => 'button']) }}
                         </p>
                         
                     </div>

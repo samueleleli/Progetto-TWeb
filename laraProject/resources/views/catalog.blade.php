@@ -1,7 +1,28 @@
-
 @extends('layouts.public')
+
 @section('title', 'Catalogo Prodotti')
+
+@section('scripts')
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("a#delete").on('click', function() {
+        var domanda = confirm("Sei sicuro di voler cancellare il prodotto?");
+        if (domanda === true) {
+            return true;  
+        }else{
+            alert('Operazione annullata');
+            return false;
+        }
+    });
+});
+</script>
+
+@endsection
+
 @section('content')
+
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -92,7 +113,7 @@
                                                <div class="col-sm-6">
                                                 @if(!$flagpub)
                                               @can('isStaff')
-                                               <a href="{{ route('delproduct',[$product->idProdotto])}}"> 
+                                               <a href="{{ route('delproduct',[$product->idProdotto])}}" id="delete"> 
                                                    <img src="{{ asset('images/trash.png') }} " width="45" height="45" alt="none" align="right"> 
                                                 </a>
                                                 <a href="{{ route('modproduct',[$product->idProdotto])}}"> 

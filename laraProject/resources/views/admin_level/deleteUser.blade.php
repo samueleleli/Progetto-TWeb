@@ -2,6 +2,25 @@
 
 @section('title', 'Elimina Cliente')
 
+@section('scripts')
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#delete").on('click', function() {
+        var domanda = confirm("Sei sicuro di voler confermare la tua scelta?");
+        if (domanda === true) {
+            return true;  
+        }else{
+            alert('Operazione annullata');
+            return false;
+        }
+    });
+});
+</script>
+
+@endsection
+
 @section('content')
 <div class="product-big-title-area">
     <div class="container">
@@ -53,7 +72,7 @@
                     
                     <tr>
                         <td class="button_delete_user" colspan="6">
-                            {{ Form::submit('Elimina') }}
+                            {{ Form::submit('Elimina', ['id' => 'delete']) }}
                         </td>
                     </tr>
                 </tbody>

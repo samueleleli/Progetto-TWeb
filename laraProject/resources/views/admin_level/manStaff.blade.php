@@ -2,6 +2,25 @@
 
 @section('title', 'Elimina Staff')
 
+@section('scripts')
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#delete").on('click', function() {
+        var domanda = confirm("Sei sicuro di voler eliminare l'utente staff?");
+        if (domanda === true) {
+            return true;  
+        }else{
+            alert('Operazione annullata');
+            return false;
+        }
+    });
+});
+</script>
+
+@endsection
+
 @section('content')
 <div class="product-big-title-area">
     <div class="container">
@@ -50,7 +69,7 @@
                 <tr>
                     <td  colspan="6">
                         <div class="button_delete">
-                            {{ Form::button('Elimina Staff', ['type' => 'submit','class' => 'input','name' => 'btnsubmit','value' => 'delete']) }}
+                            {{ Form::button('Elimina Staff', ['id' => 'delete', 'type' => 'submit','class' => 'input','name' => 'btnsubmit','value' => 'delete']) }}
                         </div>
                         <div class="button_editStaff">
                             {{ Form::button('Modifica Dati Staff', ['type' => 'submit', 'class' => 'input','name' => 'btnsubmit', 'value' => 'edit']) }}

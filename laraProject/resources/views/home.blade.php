@@ -1,9 +1,9 @@
-
 @extends('layouts.public')
+
 @section('title','Home')
 
 @section('scripts')
-@parent
+
 <script src="{{ asset('js/functions.js') }}" ></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script type="text/javascript">
