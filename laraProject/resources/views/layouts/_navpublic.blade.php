@@ -1,13 +1,3 @@
-@section('scripts')
-<script src="{{ asset('js/functions.js') }}" ></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-$(function () {
-        ItemSelected();
-});
-</script>
-
-@section('content')
    <div class="container">
                 <div class="row">
                     <div class="navbar-collapse collapse">
