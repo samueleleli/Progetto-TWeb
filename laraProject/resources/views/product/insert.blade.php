@@ -32,6 +32,18 @@ $(function () {
             doFormValidation(actionUrl, formId);
         });
 });
+
+$(document).ready(function () {
+    $("#edit").on('click', function() {
+        var domanda = confirm("Sei sicuro di voler confermare le modifiche?");
+        if (domanda === true) {
+            return true;  
+        }else{
+            alert('Operazione annullata');
+            return false;
+        }
+    });
+});
 </script>
 
 @endsection
@@ -129,7 +141,7 @@ $(function () {
                     
                     <div class="form-row place-order">
                         @if(!$flagAgg) {{ Form::submit('Inserisci Prodotto', ['class' => 'button']) }}
-                        @else {{ Form::submit('Aggiorna Prodotto', ['class' => 'button']) }}
+                        @else {{ Form::submit('Aggiorna Prodotto', ['id' => 'edit', 'class' => 'button']) }}
                         @endif
                     </div>
                     
