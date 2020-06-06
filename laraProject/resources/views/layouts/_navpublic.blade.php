@@ -1,25 +1,33 @@
+@section('scripts')
+<script src="{{ asset('js/functions.js') }}" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function () {
+        ItemSelected();
+});
+</script>
 
-    
-            <div class="container">
+@section('content')
+   <div class="container">
                 <div class="row">
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="{{ route('home') }}">Home</a></li>
-                            <li><a href="{{ route('catalog1') }}">Catalogo Prodotti</a></li>
+                            <li><a href="{{ route('home') }}" id='1'>Home</a></li>
+                            <li><a href="{{ route('catalog1') }}"  id='2'>Catalogo Prodotti</a></li>
                             
                             @can('isUser')
-                            <li><a href="{{ route('modData') }}">Modifica Profilo</a></li>
-                            <li><a href="{{ route('user') }}">Profilo</a></li>
+                            <li><a href="{{ route('modData') }}" class="item" id='3'>Modifica Profilo</a></li>
+                            <li><a href="{{ route('user') }}" class="item" id='4'>Profilo</a></li>
                             @endcan
                             
                             @can('isStaff')
-                            <li><a href="{{ route('modificacatalogo') }}">Modifica Catalogo</a></li>
-                            <li><a href="{{ route('staff') }}">Profilo</a></li>
+                            <li><a href="{{ route('modificacatalogo') }}"  id='5'>Modifica Catalogo</a></li>
+                            <li><a href="{{ route('staff') }}" id='6'>Profilo</a></li>
                             @endcan
                             
                             @can('isAdmin')
-                            <li><a href="{{ route('manUsers') }}">Gestione Utenti</a></li>
-                            <li><a href="{{ route('admin') }}">Profilo</a></li>
+                            <li><a href="{{ route('manUsers') }}" class="item" id='7'>Gestione Utenti</a></li>
+                            <li><a href="{{ route('admin') }}" class="item" id='8'>Profilo</a></li>
                             @endcan
                             
                             @auth

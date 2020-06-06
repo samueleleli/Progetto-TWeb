@@ -2,7 +2,6 @@
 @extends('layouts.public')
 @section('title', 'Catalogo Prodotti')
 @section('content')
-
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -25,6 +24,21 @@
                 
                 <!-- inizio sezione laterale -->
                 <div class="col-md-4">
+                    @canany(['isStaff','isAdmin'])
+                    @else
+                        <div class="search-container">
+                        @if($route=='catalog1')
+                        {{ Form::open(array('route' => $route,'method' => 'get'))}}
+                        @elseif($route=='catalog2')
+                        {{ Form::open(array('route' => [$route, $cat],'method' => 'get'))}}
+                        @elseif($route=='catalog3')
+                        {{ Form::open(array('route' => [$route, [$cat, $subcat]],'method' => 'get'))}}
+                        @endif
+                            {{Form::text('search','',['id' => 'search','placeholder' => 'Search..'])}}
+                        {{ Form::submit('Search', ['class' => 'button']) }} 
+                        {{Form::close()}}
+                        </div>
+                    @endcanany
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Categorie Prodotti</h2>
                             <ul>
@@ -59,7 +73,7 @@
                 
                 <!-- inizio sezione prodotti -->
                 <div class="col-md-8">
-                    <div class="row ">
+                    <div class="row">
                         @isset($products)
                             @foreach ($products as $product)
                                <div class="row rounded-corner">
@@ -102,7 +116,7 @@
                             @endforeach
                             
                             <!--Paginazione-->
-                            @include('pagination.paginator', ['paginator' => $products])
+                            @include('pagination.paginator', ['paginator' => $products, 'search' => $searchvalue])
                             
                         @endisset()
                     </div>

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         @show
         @section('scripts')
-        @show
+        @show    
         <title>eElectronics | @yield('title', 'Catalogo eElectronics')</title>
     </head>
     

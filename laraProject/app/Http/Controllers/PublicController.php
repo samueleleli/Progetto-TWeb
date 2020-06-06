@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use App\Models\Catalog;
 
@@ -12,7 +13,7 @@ class PublicController extends Controller {
         $this->_catalogModel = new Catalog;
     }
 
-    public function showCatalog() {
+    public function showCatalog(Request $request) {
         $route = request()->route()->getName();
         
         if($route=='catalog1') 
@@ -25,13 +26,19 @@ class PublicController extends Controller {
         //Prodotti di tutte le categorie
         $prods = $this->_catalogModel->getProdsByCat($cats->map->only(['idCategoria']));
         
+        if(!is_null($request->get('search'))){
+            $prods = $this->_catalogModel->getProds($request->get('search'));
+        }
+        
         return view('catalog')
+                        ->with('searchvalue',$request->get('search'))
                         ->with('categories', $cats)
                         ->with('products', $prods) 
-                        ->with('flagpub',$flagPub);
+                        ->with('flagpub',$flagPub)
+                        ->with('route',$route);
     }
 
-    public function showCategories($catId) {
+    public function showCategories($catId,Request $request) {
         $route = request()->route()->getName();
         
         if($route=='catalog2') 
@@ -50,15 +57,21 @@ class PublicController extends Controller {
         //Prodotti della categoria selezionata 
         $prods = $this->_catalogModel->getProdsByCat([$catId], 3);
 
+        if(!is_null($request->get('search'))){
+            $prods = $this->_catalogModel->getProdsByCatSearch([$catId],$request->get('search'));
+        }
         return view('catalog')
+                        ->with('route',$route)
+                        ->with('searchvalue',$request->get('search'))
                         ->with('categories', $cats)
                         ->with('selectedCat', $selCat)
                         ->with('subCategories', $subCats)
                         ->with('products', $prods)
-                        ->with('flagpub',$flagPub);
+                        ->with('flagpub',$flagPub)
+                        ->with('cat',$catId);
         }
 
-    public function showSubCategories($catId, $sotCatId) {
+    public function showSubCategories($catId, $sotCatId,Request $request) {
         $route = request()->route()->getName();
         
         if($route=='catalog3') 
@@ -76,13 +89,20 @@ class PublicController extends Controller {
 
         //Prodotti della sottocategoria selezionata
         $prods = $this->_catalogModel->getProdsBySubCat([$sotCatId]);
-
-       return view('catalog')
+        
+        if(!is_null($request->get('search'))){
+            $prods = $this->_catalogModel->getProdsBySubCatSearch($sotCatId,$catId,$request->get('search'),3);
+        }
+        
+        return view('catalog')
+                        ->with('route',$route)
+                        ->with('searchvalue',$request->get('search'))
                         ->with('categories', $cats)
                         ->with('selectedCat', $selCat)
                         ->with('subCategories', $subCats)
                         ->with('products', $prods)
-                        ->with('flagpub',$flagPub);
+                        ->with('flagpub',$flagPub)
+                        ->with('cat',$catId)
+                        ->with('subcat',$sotCatId);
     }
-    
 }

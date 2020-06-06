@@ -124,3 +124,5 @@ Route::get('/addCategory', 'StaffController@addCategory')
 
 Route::post('/addCategory', 'StaffController@storeCategory')
         ->name('addCategory.store');
+
+  
