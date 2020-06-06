@@ -45,19 +45,19 @@ class Catalog {
     }
     
     public function getProds($search,$paged = 5){
-       $prods = Product::where('nome','LIKE','%'.$search."%");
+       $prods = Product::where('descrEstesa','LIKE','%'.$search."%");
        return $prods->paginate($paged);
     }
     
     public function getProdsByCatSearch($idCat,$search,$paged=3){
         $prods = Product::whereHas('prodSubCat', function ($query) use ($idCat) {
                         $query->whereIn('idCategoria', $idCat);
-        })->where('nome','LIKE','%'.$search."%");
+        })->where('descrEstesa','LIKE','%'.$search."%");
        return $prods->paginate($paged);
     }
     
     public function getProdsBySubCatSearch($idSubCat,$idCat,$search,$paged=3){
-       $prods = Product::where('nome','LIKE','%'.$search."%")->where('idSottocategoria',$idSubCat);
+       $prods = Product::where('descrEstesa','LIKE','%'.$search."%")->where('idSottocategoria',$idSubCat);
        return $prods->paginate($paged);
     }
 }
