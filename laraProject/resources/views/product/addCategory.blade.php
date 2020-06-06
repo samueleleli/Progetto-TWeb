@@ -9,33 +9,32 @@
 <script src="{{ asset('js/functions.js') }}" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
-    $(function () {
-        var actionUrl = "{{ route('addCategory.store') }}";
-        var formId = 'addCategory';
-        $(":input").on('blur', function (event) {
-            var formElementId = $(this).attr('id');
-            doElemValidation(formElementId, actionUrl, formId);
-        });
-        $("#addCategory").on('submit', function (event) {
-            event.preventDefault();
-            doFormValidation(actionUrl, formId);
-        });
+$(function () {
+    var actionUrl = "{{ route('addCategory.store') }}";
+    var formId = 'addCategory';
+    $(":input").on('blur', function (event) {
+        var formElementId = $(this).attr('id');
+        doElemValidation(formElementId, actionUrl, formId);
     });
-
-    $(document).ready(function () {
-
-        $('div.select-category').hide();
-
-        $('input[type="radio"]').click(function () {
-            if ($(this).attr("value") === "categoria") {
-                $(".select-category").hide('slow');
-            }
-            if ($(this).attr("value") === "sottocategoria") {
-                $(".select-category").show('slow');
-            }
-        });
-
+    $("#addCategory").on('submit', function (event) {
+        event.preventDefault();
+        doFormValidation(actionUrl, formId);
     });
+});
+
+$(document).ready(function () {
+
+    $('div.select-category').hide();
+
+    $('input[type="radio"]').click(function () {
+        if ($(this).attr("value") === "categoria") {
+            $(".select-category").hide('slow');
+        }
+        if ($(this).attr("value") === "sottocategoria") {
+            $(".select-category").show('slow');
+        }
+    });
+});
 </script>
 
 
@@ -84,7 +83,7 @@
                         </div>
 
                         <div class='select-category'>
-                            {{ Form::select('categorie', $cats, 'Informatica') }}
+                            {{ Form::select('categorie', $cats) }}
                         </div>
 
                         <p>

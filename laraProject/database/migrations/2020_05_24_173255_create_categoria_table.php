@@ -15,7 +15,7 @@ class CreateCategoriaTable extends Migration
     {
         Schema::create('categoria', function (Blueprint $table) {           
             $table->bigIncrements('idCategoria')->unsigned();
-            $table->string('categoria',50);            
+            $table->string('categoria',50)->unique();        
         });
     }
 
