@@ -7,11 +7,7 @@
 <script src="{{ asset('js/functions.js') }}" ></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script type="text/javascript">
-$(function () {
-    $('div.caption h2').on('click', function () {
-        $(this).closest('div.latest-product').find('div.text-home p').slideToggle();
-    });
-});
+
 
 function fotografie(x, n) {
     var foto = new Array(n);
@@ -25,6 +21,9 @@ function fotografie(x, n) {
 $(document).ready(function () {
     $('div.text-home p').hide();
     slideshow(3, 1000, 4000);
+    $('div.caption h2').on('click', function () {
+        $(this).closest('div.latest-product').find('div.text-home p').slideToggle();
+    });
 });
 </script>
 
