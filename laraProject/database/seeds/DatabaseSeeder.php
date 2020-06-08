@@ -68,7 +68,7 @@ class DatabaseSeeder extends Seeder
                 2256 GB HDD+SSD
                 Desktop Nero PC
                 Windows 10 Home',
-                'prezzo' => 1599.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Desktop Fascia Media.jpg'],
+                'prezzo' => 1599.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => null],
             ['nome' => 'Lenovo IdeaCentre 510', 'idSottocategoria' => 1,
                 'descrBreve' => 'Desktop Entry-Level', 'descrEstesa' => 'Intel® Core™ i5 di nona generazione i5-9400
                  8 GB DDR4-SDRAM
@@ -293,7 +293,7 @@ class DatabaseSeeder extends Seeder
                 Processore A12 Bionic - 3D Touch - Ricarica wireless
                 Riconoscimento del volto tramite la fotocamera TrueDepth
                 Distribuito da Apple Italia',
-                'prezzo' => 999.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => ''],
+                'prezzo' => 999.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => null],
             ['nome' => 'Samsung Galaxy A71', 'idSottocategoria' => 7,
                 'descrBreve' => 'Smartphone Dual SIM', 'descrEstesa' => 'Quadri Band - 4G-LTE - Wi-Fi - NFC - A-GPS
                 Fotocamera posteriore: 64 Megapixel - Android 10
@@ -327,7 +327,7 @@ class DatabaseSeeder extends Seeder
                 Android 9 Pie - Processore: 8-Core da 1,6 GHz
                 Memoria interna: 32 GB - RAM: 3 GB
                 Display 5,8 TFT - Distribuito da SAMSUNG Italia',
-                'prezzo' => 179.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => ''],
+                'prezzo' => 179.99, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => null],
             ['nome' => 'Huawei P30 Lite', 'idSottocategoria' => 7,
                 'descrBreve' => 'Smartphone Dual SIM', 'descrEstesa' => 'Penta Band - 4G-LTE - NFC - A-GPS
                 Fotocamera posteriore: 48 Megapixel
@@ -336,7 +336,7 @@ class DatabaseSeeder extends Seeder
                 Memoria interna: 128 GB - RAM: 4 GB
                 Display 6,15 LCD
                 Distribuito da HUAWEI Italia',
-                'prezzo' => 259.99, 'percSconto' => 65, 'flagSconto' => 1, 'immagine' => ''],
+                'prezzo' => 259.99, 'percSconto' => 65, 'flagSconto' => 1, 'immagine' => null],
             
             
             ['nome' => 'Samsung Galaxy Tab A (2019)', 'idSottocategoria' => 8,
