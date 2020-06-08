@@ -52,7 +52,6 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')
 Route::post('register', 'Auth\RegisterController@register');
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'AdminController@index')
         ->name('admin')->middleware('can:isAdmin');
@@ -76,10 +75,10 @@ Route::get('/modCat', 'StaffController@menuStaff')
 Route::get('/delProd/{idProd}', 'StaffController@removeProduct')
         ->name('delproduct')->middleware('can:isStaff');
 
-Route::get('/newProd/{idProd}', 'StaffController@addProduct')
+Route::get('/modProd/{idProd}', 'StaffController@addProduct')
         ->name('modproduct')->middleware('can:isStaff');
 
-Route::get('/newproduct', 'StaffController@addProduct')
+Route::get('/newProd', 'StaffController@addProduct')
         ->name('newproduct')->middleware('can:isStaff');
 
 Route::post('/storeProd', 'StaffController@storeProduct')
@@ -88,8 +87,11 @@ Route::post('/storeProd', 'StaffController@storeProduct')
 Route::post('/updateProd', 'StaffController@storeProduct')
         ->name('newproduct.update')->middleware('can:isStaff');
 
-Route::get('/modCat/selproduct', 'StaffController@selectProduct')
-        ->name('selproduct')->middleware('can:isStaff');
+Route::get('/addCategory', 'StaffController@addCategory')
+        ->name('addCategory');
+
+Route::post('/addCategory', 'StaffController@storeCategory')
+        ->name('addCategory.store');
 
 
 Route::get('/manUsers', 'AdminController@manageUsers')
@@ -119,10 +121,3 @@ Route::get('/modStaff/{username}', 'AdminController@showDataStaff')
 Route::post('/modStaff', 'AdminController@editStaff')
         ->name('modStaff.edit');
 
-Route::get('/addCategory', 'StaffController@addCategory')
-        ->name('addCategory');
-
-Route::post('/addCategory', 'StaffController@storeCategory')
-        ->name('addCategory.store');
-
-  
