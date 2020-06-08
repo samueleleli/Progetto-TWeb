@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="copyright">
-                            <p>&copy; 2020 eElectronics. All Rights Reserved. Coded with &hearts; by <a href="#" target="_blank">Group 13</a></p>
+                            <p>&copy; 2020 eElectronics. All Rights Reserved. Coded with &hearts; by <a href="{{asset('/relazione/Relazione.pdf')}}" target="_blank">Group 13</a></p>
                         </div>
                     </div>
                 </div>
