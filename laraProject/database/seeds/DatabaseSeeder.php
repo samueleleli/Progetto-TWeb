@@ -433,7 +433,7 @@ class DatabaseSeeder extends Seeder
                  Tipologia HD HD 
                  Risoluzione del display 1366 x 768  pixel
                  Formato del segnale digitale DVB-C,DVB-S2,DVB-T2 ',
-                'prezzo' => 179.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'TVSchifus.jpg'],
+                'prezzo' => 179.00, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => null],
             ['nome' => 'LG 4K 70"', 'idSottocategoria' => 10,
                 'descrBreve' => 'SmartTV 70" 4K', 'descrEstesa' => 'Dimensioni schermo 70  "
                  Tipologia HD 4K Ultra HD 
@@ -447,19 +447,19 @@ class DatabaseSeeder extends Seeder
                  Tipologia HD 8K Ultra HD 
                  Risoluzione del display 7680 x 4320  pixel
                  Formato del segnale digitale DVB-C,DVB-C2,DVB-S2,DVB-T,DVB-T2 ',
-                'prezzo' => 4999.00, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => 'TVULTRAFIGA.jpg'],
+                'prezzo' => 4999.00, 'percSconto' => 40, 'flagSconto' => 1, 'immagine' => null],
             
             
             ['nome' => 'Digiquest Cam Tivùsat 4K', 'idSottocategoria' => 11,
                 'descrBreve' => 'Decoder 4K', 'descrEstesa' => 'Modulo di accesso condizionato (CAM)',
                 'prezzo' => 109.90, 'percSconto' => 0, 'flagSconto' => 0, 'immagine' => 'Decoder4K.jpg'],
             ['nome' => 'ADB i-CAN T280', 'idSottocategoria' => 11,
-                'descrBreve' => 'Cuffie Stereo Over-ear', 'descrEstesa' => 'Numero prese Scart 1 
+                'descrBreve' => 'decoder economico', 'descrEstesa' => 'Numero prese Scart 1 
                  Quantità porte USB 2.0 1 
                  TV interattiva No 
                  Telecomando portatile Si 
                  Wi-Fi No ',
-                'prezzo' => 44.90, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => 'DecoderSchifus.jpg'],
+                'prezzo' => 44.90, 'percSconto' => 20, 'flagSconto' => 1, 'immagine' => null],
             ['nome' => 'Telesystem TS9015', 'idSottocategoria' => 11,
                 'descrBreve' => 'Decoder Fascia Alta', 'descrEstesa' => 'Digital Satellite Equipment Control (DiSEqC) 1.0, 1.2, Sat-CR, USALS 
                  Numero prese Scart 1 
